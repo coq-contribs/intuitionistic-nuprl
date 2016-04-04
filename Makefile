@@ -3,769 +3,769 @@
 default : rules.vo
 
 close/close_type_sys_per_pm.vo : close/close_type_sys_per_pm.v type_sys_pfam.vo dest_close.vo pmeq_lemmas.vo
-	coqc -I close close/close_type_sys_per_pm.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_pm.v
 
 close/close_type_sys_per_int.vo : close/close_type_sys_per_int.v type_sys.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_int.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_int.v
 
 rel_nterm.vo : rel_nterm.v bin_rels.vo alphaeq.vo
-	coqc -I close rel_nterm.v
+	$(COQBIN)coqc -I close rel_nterm.v
 
 per_props_nat2.vo : per_props_nat2.v per_props_nat.vo
-	coqc -I close per_props_nat2.v
+	$(COQBIN)coqc -I close per_props_nat2.v
 
 rules_function.vo : rules_function.v rules_useful.vo subst_tacs.vo cequiv_tacs.vo per_props_equality.vo sequents_equality.vo rules_tyfam.vo
-	coqc -I close rules_function.v
+	$(COQBIN)coqc -I close rules_function.v
 
 continuity_defs2.vo : continuity_defs2.v cvterm.vo continuity_defs.vo per_props3.vo per_props_nat.vo
-	coqc -I close continuity_defs2.v
+	$(COQBIN)coqc -I close continuity_defs2.v
 
 terms.vo : terms.v opid.vo variables.vo
-	coqc -I close terms.v
+	$(COQBIN)coqc -I close terms.v
 
 terms_union.vo : terms_union.v alphaeq.vo cvterm2.vo terms_props.vo
-	coqc -I close terms_union.v
+	$(COQBIN)coqc -I close terms_union.v
 
 universe2.vo : universe2.v cequiv.vo
-	coqc -I close universe2.v
+	$(COQBIN)coqc -I close universe2.v
 
 computation_dec1.vo : computation_dec1.v terms5.vo computation7.vo computation_exc.vo
-	coqc -I close computation_dec1.v
+	$(COQBIN)coqc -I close computation_dec1.v
 
 computation_cft.vo : computation_cft.v computation8.vo computation_seq.vo
-	coqc -I close computation_cft.v
+	$(COQBIN)coqc -I close computation_cft.v
 
 type_sys.vo : type_sys.v nuprl.vo
-	coqc -I close type_sys.v
+	$(COQBIN)coqc -I close type_sys.v
 
 terms_arith.vo : terms_arith.v terms2.vo arith_props.vo
-	coqc -I close terms_arith.v
+	$(COQBIN)coqc -I close terms_arith.v
 
 continuity2_2.vo : continuity2_2.v atoms2.vo computation_seq.vo continuity_defs.vo
-	coqc -I close continuity2_2.v
+	$(COQBIN)coqc -I close continuity2_2.v
 
 tactics.vo : tactics.v eq_rel.vo LibTactics.vo
-	coqc -I close tactics.v
+	$(COQBIN)coqc -I close tactics.v
 
 nuprl.vo : nuprl.v per.vo
-	coqc -I close nuprl.v
+	$(COQBIN)coqc -I close nuprl.v
 
 lift_lsubst_tacs.vo : lift_lsubst_tacs.v csubst.vo cequiv_props.vo subst_per.vo csubst3.vo csubst5.vo csubst_decide.vo csubst_arith.vo csubst_cft.vo terms_union.vo terms_image.vo arith_props.vo compare_cterm.vo nuprl_props.vo
-	coqc -I close lift_lsubst_tacs.v
+	$(COQBIN)coqc -I close lift_lsubst_tacs.v
 
 computation_apply.vo : computation_apply.v computation8.vo computation_seq.vo
-	coqc -I close computation_apply.v
+	$(COQBIN)coqc -I close computation_apply.v
 
 pmeq_lemmas.vo : pmeq_lemmas.v type_sys_pfam.vo
-	coqc -I close pmeq_lemmas.v
+	$(COQBIN)coqc -I close pmeq_lemmas.v
 
 sovar.vo : sovar.v alphaeq.vo swap.vo tactics2.vo terms_apply.vo
-	coqc -I close sovar.v
+	$(COQBIN)coqc -I close sovar.v
 
 cvterm.vo : cvterm.v substitution.vo terms_props.vo
-	coqc -I close cvterm.v
+	$(COQBIN)coqc -I close cvterm.v
 
 rules_mono.vo : rules_mono.v rules_useful.vo rules_partial.vo
-	coqc -I close rules_mono.v
+	$(COQBIN)coqc -I close rules_mono.v
 
 close/close_type_sys_per_admiss.vo : close/close_type_sys_per_admiss.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_admiss.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_admiss.v
 
 close/close_type_sys_per_base.vo : close/close_type_sys_per_base.v type_sys.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_base.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_base.v
 
 rwper.vo : rwper.v per_props2.vo per_props_equality.vo
-	coqc -I close rwper.v
+	$(COQBIN)coqc -I close rwper.v
 
 substc_more.vo : substc_more.v continuity_defs_ceq.vo alphaeq3.vo subst_per.vo
-	coqc -I close substc_more.v
+	$(COQBIN)coqc -I close substc_more.v
 
 per_props_nat.vo : per_props_nat.v alphaeq3.vo cvterm.vo nat_defs.vo per_props_set.vo per_props_union.vo per_props3.vo list.vo
-	coqc -I close per_props_nat.v
+	$(COQBIN)coqc -I close per_props_nat.v
 
 rules_ipertype.vo : rules_ipertype.v sequents_tacs.vo sequents_useful.vo per_props_equality.vo sequents_equality.vo list.vo
-	coqc -I close rules_ipertype.v
+	$(COQBIN)coqc -I close rules_ipertype.v
 
 rules_image.vo : rules_image.v sequents_tacs.vo subst_tacs.vo cequiv_tacs.vo tactics2.vo sequents_equality.vo sequents_tacs2.vo per_props.vo lsubst_hyps.vo
-	coqc -I close rules_image.v
+	$(COQBIN)coqc -I close rules_image.v
 
 close/close_type_sys_per_tunion.vo : close/close_type_sys_per_tunion.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_tunion.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_tunion.v
 
 nuprl_props.vo : nuprl_props.v nuprl_type_sys.vo univ_tacs.vo rel_nterm.vo
-	coqc -I close nuprl_props.v
+	$(COQBIN)coqc -I close nuprl_props.v
 
 stronger_continuity_defs0.vo : stronger_continuity_defs0.v per.vo continuity_defs_ceq.vo
-	coqc -I close stronger_continuity_defs0.v
+	$(COQBIN)coqc -I close stronger_continuity_defs0.v
 
 rules_spertype.vo : rules_spertype.v sequents_tacs.vo sequents_useful.vo per_props_equality.vo sequents_equality.vo list.vo
-	coqc -I close rules_spertype.v
+	$(COQBIN)coqc -I close rules_spertype.v
 
 rules_set.vo : rules_set.v sequents_tacs.vo rules_useful.vo per_props_set.vo rules_move.vo subst_tacs.vo cequiv_tacs.vo per_props_equality.vo sequents_equality.vo rules_tyfam.vo list.vo
-	coqc -I close rules_set.v
+	$(COQBIN)coqc -I close rules_set.v
 
 stronger_continuity_defs1.vo : stronger_continuity_defs1.v stronger_continuity_defs_typ.vo terms5.vo cvterm3.vo
-	coqc -I close stronger_continuity_defs1.v
+	$(COQBIN)coqc -I close stronger_continuity_defs1.v
 
 close/close_type_sys_per_disect.vo : close/close_type_sys_per_disect.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_disect.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_disect.v
 
 csubst_arith.vo : csubst_arith.v csubst2.vo
-	coqc -I close csubst_arith.v
+	$(COQBIN)coqc -I close csubst_arith.v
 
 stronger_continuity_defs2.vo : stronger_continuity_defs2.v computation_dec1.vo computation9.vo stronger_continuity_defs_typ.vo
-	coqc -I close stronger_continuity_defs2.v
+	$(COQBIN)coqc -I close stronger_continuity_defs2.v
 
 bin_rels.vo : bin_rels.v UsefulTypes.vo
-	coqc -I close bin_rels.v
+	$(COQBIN)coqc -I close bin_rels.v
 
 per_props.vo : per_props.v nuprl_props.vo choice.vo cvterm.vo
-	coqc -I close per_props.v
+	$(COQBIN)coqc -I close per_props.v
 
 cequiv_props2.vo : cequiv_props2.v cequiv.vo universe2.vo
-	coqc -I close cequiv_props2.v
+	$(COQBIN)coqc -I close cequiv_props2.v
 
 per_props4.vo : per_props4.v continuity_defs_ceq.vo per_props_nat2.vo stronger_continuity_defs_typ.vo
-	coqc -I close per_props4.v
+	$(COQBIN)coqc -I close per_props4.v
 
 rules_useful.vo : rules_useful.v sequents_tacs.vo list.vo
-	coqc -I close rules_useful.v
+	$(COQBIN)coqc -I close rules_useful.v
 
 rules_axiom_cases.vo : rules_axiom_cases.v rules_cft.vo rules_inl_inr_cases.vo
-	coqc -I close rules_axiom_cases.v
+	$(COQBIN)coqc -I close rules_axiom_cases.v
 
 rules_halts_spread.vo : rules_halts_spread.v computation_pair.vo approx_props2.vo sequents_tacs.vo per_props_equality.vo sequents_equality.vo per_props_top.vo
-	coqc -I close rules_halts_spread.v
+	$(COQBIN)coqc -I close rules_halts_spread.v
 
 stronger_continuity_defs3.vo : stronger_continuity_defs3.v stronger_continuity_defs2.vo cvterm3.vo
-	coqc -I close stronger_continuity_defs3.v
+	$(COQBIN)coqc -I close stronger_continuity_defs3.v
 
 tactics2.vo : tactics2.v UsefulTypes.vo
-	coqc -I close tactics2.v
+	$(COQBIN)coqc -I close tactics2.v
 
 per_props_set.vo : per_props_set.v per_props.vo
-	coqc -I close per_props_set.v
+	$(COQBIN)coqc -I close per_props_set.v
 
 rules_struct.vo : rules_struct.v rules_useful.vo sequents_useful.vo
-	coqc -I close rules_struct.v
+	$(COQBIN)coqc -I close rules_struct.v
 
 stronger_continuity_defs4.vo : stronger_continuity_defs4.v stronger_continuity_defs4_aux.vo
-	coqc -I close stronger_continuity_defs4.v
+	$(COQBIN)coqc -I close stronger_continuity_defs4.v
 
 rules_pw_useful.vo : rules_pw_useful.v rules_useful.vo
-	coqc -I close rules_pw_useful.v
+	$(COQBIN)coqc -I close rules_pw_useful.v
 
 sequents_tacs.vo : sequents_tacs.v sequents.vo lift_lsubst_tacs.vo
-	coqc -I close sequents_tacs.v
+	$(COQBIN)coqc -I close sequents_tacs.v
 
 per_props2.vo : per_props2.v per_props.vo subst_per.vo sequents_tacs.vo cequiv_tacs.vo subst_tacs.vo
-	coqc -I close per_props2.v
+	$(COQBIN)coqc -I close per_props2.v
 
 cequiv_tacs.vo : cequiv_tacs.v cequiv_props.vo
-	coqc -I close cequiv_tacs.v
+	$(COQBIN)coqc -I close cequiv_tacs.v
 
 chalts.vo : chalts.v per.vo
-	coqc -I close chalts.v
+	$(COQBIN)coqc -I close chalts.v
 
 rules_pertype.vo : rules_pertype.v sequents_tacs.vo sequents_useful.vo per_props_equality.vo sequents_equality.vo list.vo
-	coqc -I close rules_pertype.v
+	$(COQBIN)coqc -I close rules_pertype.v
 
 per_props3.vo : per_props3.v prog.vo cvterm.vo per_props2.vo
-	coqc -I close per_props3.v
+	$(COQBIN)coqc -I close per_props3.v
 
 per_props_product.vo : per_props_product.v per_props.vo
-	coqc -I close per_props_product.v
+	$(COQBIN)coqc -I close per_props_product.v
 
 stronger_continuity_rule4_v2_2.vo : stronger_continuity_rule4_v2_2.v stronger_continuity_rule4_v2.vo per_props_subtype_rel.vo
-	coqc -I close stronger_continuity_rule4_v2_2.v
+	$(COQBIN)coqc -I close stronger_continuity_rule4_v2_2.v
 
 approx_star.vo : approx_star.v approx_star_props2.vo computation6.vo
-	coqc -I close approx_star.v
+	$(COQBIN)coqc -I close approx_star.v
 
 subst_per.vo : subst_per.v terms_per.vo csubst2.vo
-	coqc -I close subst_per.v
+	$(COQBIN)coqc -I close subst_per.v
 
 close/close_type_sys_per_mono.vo : close/close_type_sys_per_mono.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_mono.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_mono.v
 
 per_props_psquash.vo : per_props_psquash.v computation9.vo psquash.vo per_props3.vo substc_more.vo per_props_equality.vo per_props_nat.vo
-	coqc -I close per_props_psquash.v
+	$(COQBIN)coqc -I close per_props_psquash.v
 
 computation_preserve1.vo : computation_preserve1.v computation2.vo
-	coqc -I close computation_preserve1.v
+	$(COQBIN)coqc -I close computation_preserve1.v
 
 compare_cterm.vo : compare_cterm.v substitution.vo terms_props.vo cvterm.vo
-	coqc -I close compare_cterm.v
+	$(COQBIN)coqc -I close compare_cterm.v
 
 nuprl_lemmas2.vo : nuprl_lemmas2.v sequents_tacs.vo rules_isect.vo rules_squiggle.vo rules_struct.vo tactics2.vo
-	coqc -I close nuprl_lemmas2.v
+	$(COQBIN)coqc -I close nuprl_lemmas2.v
 
 rules_less_exception.vo : rules_less_exception.v sequents_tacs2.vo cequiv_props.vo subst_tacs.vo per_props_equality.vo per_can.vo computation_less.vo integer_type.vo
-	coqc -I close rules_less_exception.v
+	$(COQBIN)coqc -I close rules_less_exception.v
 
 swap.vo : swap.v AssociationList.vo alphaeq.vo
-	coqc -I close swap.v
+	$(COQBIN)coqc -I close swap.v
 
 alphaeq.vo : alphaeq.v substitution.vo
-	coqc -I close alphaeq.v
+	$(COQBIN)coqc -I close alphaeq.v
 
 nuprl_lemmas1.vo : nuprl_lemmas1.v sequents_tacs.vo rules_isect.vo rules_squiggle.vo rules_struct.vo
-	coqc -I close nuprl_lemmas1.v
+	$(COQBIN)coqc -I close nuprl_lemmas1.v
 
 close/close_type_sys_per_init.vo : close/close_type_sys_per_init.v type_sys.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_init.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_init.v
 
 computation_preserve3.vo : computation_preserve3.v computation3.vo
-	coqc -I close computation_preserve3.v
+	$(COQBIN)coqc -I close computation_preserve3.v
 
 terms_tacs.vo : terms_tacs.v terms2.vo
-	coqc -I close terms_tacs.v
+	$(COQBIN)coqc -I close terms_tacs.v
 
 rules_integer_ring.vo : rules_integer_ring.v computation_arith.vo approx_props2.vo sequents_tacs.vo sequents_tacs2.vo per_props_equality.vo sequents_equality.vo per_props_nat.vo per_can.vo per_props_top.vo integer_type.vo terms_arith.vo
-	coqc -I close rules_integer_ring.v
+	$(COQBIN)coqc -I close rules_integer_ring.v
 
 computation_preserve4.vo : computation_preserve4.v computation_preserve3.vo
-	coqc -I close computation_preserve4.v
+	$(COQBIN)coqc -I close computation_preserve4.v
 
 computation_pair.vo : computation_pair.v computation4.vo
-	coqc -I close computation_pair.v
+	$(COQBIN)coqc -I close computation_pair.v
 
 computation_preserve5.vo : computation_preserve5.v computation_preserve4.vo
-	coqc -I close computation_preserve5.v
+	$(COQBIN)coqc -I close computation_preserve5.v
 
 sequents_useful.vo : sequents_useful.v sequents_tacs.vo per_props_equality.vo
-	coqc -I close sequents_useful.v
+	$(COQBIN)coqc -I close sequents_useful.v
 
 rules_cbv_exception.vo : rules_cbv_exception.v chalts.vo sequents_tacs2.vo cequiv_props.vo subst_tacs.vo per_props_equality.vo per_can.vo computation_cbv.vo cequiv_props2.vo
-	coqc -I close rules_cbv_exception.v
+	$(COQBIN)coqc -I close rules_cbv_exception.v
 
 per_props_union.vo : per_props_union.v per_props.vo terms_union.vo cequiv_props.vo
-	coqc -I close per_props_union.v
+	$(COQBIN)coqc -I close per_props_union.v
 
 sequents_tacs2.vo : sequents_tacs2.v sequents.vo
-	coqc -I close sequents_tacs2.v
+	$(COQBIN)coqc -I close sequents_tacs2.v
 
 terms_pk.vo : terms_pk.v terms2.vo
-	coqc -I close terms_pk.v
+	$(COQBIN)coqc -I close terms_pk.v
 
 stronger_continuity_defs4_aux.vo : stronger_continuity_defs4_aux.v continuity.vo stronger_continuity_defs1.vo stronger_continuity_defs3.vo list.vo
-	coqc -I close stronger_continuity_defs4_aux.v
+	$(COQBIN)coqc -I close stronger_continuity_defs4_aux.v
 
 rules_cft_exception.vo : rules_cft_exception.v chalts.vo sequents_tacs2.vo cequiv_props.vo subst_tacs.vo per_props_equality.vo per_can.vo computation_cft.vo cequiv_props2.vo list.vo
-	coqc -I close rules_cft_exception.v
+	$(COQBIN)coqc -I close rules_cft_exception.v
 
 list.vo : list.v bin_rels.vo tactics2.vo
-	coqc -I close list.v
+	$(COQBIN)coqc -I close list.v
 
 csubst_decide.vo : csubst_decide.v csubst.vo
-	coqc -I close csubst_decide.v
+	$(COQBIN)coqc -I close csubst_decide.v
 
 choice.vo : choice.v nuprl_props.vo
-	coqc -I close choice.v
+	$(COQBIN)coqc -I close choice.v
 
 subst_tacs.vo : subst_tacs.v csubst.vo
-	coqc -I close subst_tacs.v
+	$(COQBIN)coqc -I close subst_tacs.v
 
 rules_squiggle.vo : rules_squiggle.v sequents_tacs.vo per_props_equality.vo
-	coqc -I close rules_squiggle.v
+	$(COQBIN)coqc -I close rules_squiggle.v
 
 close/close_type_sys_per_pw.vo : close/close_type_sys_per_pw.v type_sys_pfam.vo dest_close.vo pweq_lemmas.vo
-	coqc -I close close/close_type_sys_per_pw.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_pw.v
 
 csubst.vo : csubst.v alphaeq2.vo
-	coqc -I close csubst.v
+	$(COQBIN)coqc -I close csubst.v
 
 csubst5.vo : csubst5.v csubst.vo
-	coqc -I close csubst5.v
+	$(COQBIN)coqc -I close csubst5.v
 
 substitution.vo : substitution.v terms2.vo terms_tacs.vo lmap.vo
-	coqc -I close substitution.v
+	$(COQBIN)coqc -I close substitution.v
 
 pweq_lemmas.vo : pweq_lemmas.v type_sys_pfam.vo
-	coqc -I close pweq_lemmas.v
+	$(COQBIN)coqc -I close pweq_lemmas.v
 
 stronger_continuity_props1.vo : stronger_continuity_props1.v list.vo per_props.vo continuity_defs.vo stronger_continuity_defs0.vo cequiv_fresh.vo
-	coqc -I close stronger_continuity_props1.v
+	$(COQBIN)coqc -I close stronger_continuity_props1.v
 
 per_props_equality_more.vo : per_props_equality_more.v per_props_more.vo per_props_equality.vo
-	coqc -I close per_props_equality_more.v
+	$(COQBIN)coqc -I close per_props_equality_more.v
 
 close/close_type_sys_per_image.vo : close/close_type_sys_per_image.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_image.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_image.v
 
 sovar_alpha.vo : sovar_alpha.v sovar.vo alphaeq_sub.vo
-	coqc -I close sovar_alpha.v
+	$(COQBIN)coqc -I close sovar_alpha.v
 
 univ_tacs.vo : univ_tacs.v type_sys.vo
-	coqc -I close univ_tacs.v
+	$(COQBIN)coqc -I close univ_tacs.v
 
 csubst2.vo : csubst2.v csubst.vo cvterm2.vo
-	coqc -I close csubst2.v
+	$(COQBIN)coqc -I close csubst2.v
 
 subst_props.vo : subst_props.v csubst.vo
-	coqc -I close subst_props.v
+	$(COQBIN)coqc -I close subst_props.v
 
 csubst3.vo : csubst3.v csubst2.vo
-	coqc -I close csubst3.v
+	$(COQBIN)coqc -I close csubst3.v
 
 per.vo : per.v cequiv.vo universe2.vo atoms.vo
-	coqc -I close per.v
+	$(COQBIN)coqc -I close per.v
 
 per_props_equality2.vo : per_props_equality2.v per_props_equality.vo
-	coqc -I close per_props_equality2.v
+	$(COQBIN)coqc -I close per_props_equality2.v
 
 integer_type.vo : integer_type.v approx_props2.vo sequents_tacs.vo sequents_tacs2.vo per_props_equality.vo sequents_equality.vo per_props_nat.vo per_can.vo per_props_top.vo computation_arith.vo
-	coqc -I close integer_type.v
+	$(COQBIN)coqc -I close integer_type.v
 
 rules_product.vo : rules_product.v rules_useful.vo subst_tacs.vo cequiv_tacs.vo per_props_equality.vo per_props_product.vo sequents_equality.vo sequents_tacs2.vo rules_tyfam.vo lsubst_hyps.vo
-	coqc -I close rules_product.v
+	$(COQBIN)coqc -I close rules_product.v
 
 opid.vo : opid.v list.vo
-	coqc -I close opid.v
+	$(COQBIN)coqc -I close opid.v
 
 continuity_type_aux.vo : continuity_type_aux.v csubst2.vo continuity_defs.vo list.vo
-	coqc -I close continuity_type_aux.v
+	$(COQBIN)coqc -I close continuity_type_aux.v
 
 computation_exc.vo : computation_exc.v computation7.vo terms5.vo
-	coqc -I close computation_exc.v
+	$(COQBIN)coqc -I close computation_exc.v
 
 rules_equality2.vo : rules_equality2.v rules_useful.vo per_props_equality.vo per_props_union.vo subst_tacs.vo
-	coqc -I close rules_equality2.v
+	$(COQBIN)coqc -I close rules_equality2.v
 
 approx_star_def.vo : approx_star_def.v approx_props1.vo
-	coqc -I close approx_star_def.v
+	$(COQBIN)coqc -I close approx_star_def.v
 
 type_sys_useful.vo : type_sys_useful.v type_sys.vo
-	coqc -I close type_sys_useful.v
+	$(COQBIN)coqc -I close type_sys_useful.v
 
 continuity_axiom2.vo : continuity_axiom2.v continuity.vo continuity2_2.vo continuity3_2.vo continuity_defs2.vo
-	coqc -I close continuity_axiom2.v
+	$(COQBIN)coqc -I close continuity_axiom2.v
 
 computation_cbv.vo : computation_cbv.v computation8.vo computation_seq.vo
-	coqc -I close computation_cbv.v
+	$(COQBIN)coqc -I close computation_cbv.v
 
 terms3.vo : terms3.v terms2.vo
-	coqc -I close terms3.v
+	$(COQBIN)coqc -I close terms3.v
 
 close/close_type_sys_per_uatom.vo : close/close_type_sys_per_uatom.v type_sys.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_uatom.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_uatom.v
 
 universe.vo : universe.v
-	coqc -I close universe.v
+	$(COQBIN)coqc -I close universe.v
 
 atom_ren.vo : atom_ren.v computation5.vo computation_preserve5.vo
-	coqc -I close atom_ren.v
+	$(COQBIN)coqc -I close atom_ren.v
 
 continuity_defs.vo : continuity_defs.v computation8.vo list_tacs.vo alphaeq2.vo substitution2.vo terms4.vo nat_defs.vo
-	coqc -I close continuity_defs.v
+	$(COQBIN)coqc -I close continuity_defs.v
 
 terms2.vo : terms2.v terms.vo
-	coqc -I close terms2.v
+	$(COQBIN)coqc -I close terms2.v
 
 continuity_stuff.vo : continuity_stuff.v continuity_rule.vo stronger_continuity_rule4_v3.vo stronger_continuity_props1.vo stronger_continuity_rule4.vo stronger_continuity_rule4_v2.vo stronger_continuity_rule4_v2_2.vo
-	coqc -I close continuity_stuff.v
+	$(COQBIN)coqc -I close continuity_stuff.v
 
 rules_arith_callbyvalue.vo : rules_arith_callbyvalue.v computation_minus.vo approx_props2.vo sequents_tacs.vo sequents_tacs2.vo per_props_equality.vo sequents_equality.vo per_props_nat.vo per_can.vo per_props_top.vo integer_type.vo
-	coqc -I close rules_arith_callbyvalue.v
+	$(COQBIN)coqc -I close rules_arith_callbyvalue.v
 
 close/close_type_sys_per_union.vo : close/close_type_sys_per_union.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_union.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_union.v
 
 close/close_type_sys_per_m.vo : close/close_type_sys_per_m.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_m.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_m.v
 
 close/close_type_sys_per_atom.vo : close/close_type_sys_per_atom.v type_sys.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_atom.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_atom.v
 
 alphaeq4.vo : alphaeq4.v alphaeq3.vo alphaeq_sub.vo approx_star_props1.vo continuity_defs_ceq.vo
-	coqc -I close alphaeq4.v
+	$(COQBIN)coqc -I close alphaeq4.v
 
 cequiv_fresh.vo : cequiv_fresh.v approx_props3.vo cequiv.vo continuity_defs_ceq.vo
-	coqc -I close cequiv_fresh.v
+	$(COQBIN)coqc -I close cequiv_fresh.v
 
 per_props_more.vo : per_props_more.v per_props.vo
-	coqc -I close per_props_more.v
+	$(COQBIN)coqc -I close per_props_more.v
 
 rules_isect2.vo : rules_isect2.v sequents_tacs.vo per_props_equality.vo sequents_equality.vo
-	coqc -I close rules_isect2.v
+	$(COQBIN)coqc -I close rules_isect2.v
 
 rules_decide_exception.vo : rules_decide_exception.v computation_injections.vo approx_props2.vo sequents_tacs.vo sequents_tacs2.vo per_props_equality.vo sequents_equality.vo per_props_nat.vo per_can.vo per_props_top.vo
-	coqc -I close rules_decide_exception.v
+	$(COQBIN)coqc -I close rules_decide_exception.v
 
 close/close_type_sys_per_ipertype.vo : close/close_type_sys_per_ipertype.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_ipertype.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_ipertype.v
 
 cequiv.vo : cequiv.v approx_star.vo computation7.vo
-	coqc -I close cequiv.v
+	$(COQBIN)coqc -I close cequiv.v
 
 rules_exception.vo : rules_exception.v computation_pair.vo approx_props2.vo sequents_tacs.vo sequents_tacs2.vo per_props_equality.vo sequents_equality.vo per_props_nat.vo per_can.vo per_props_top.vo
-	coqc -I close rules_exception.v
+	$(COQBIN)coqc -I close rules_exception.v
 
 approx.vo : approx.v bin_rels.vo computation_seq.vo rel_nterm.vo
-	coqc -I close approx.v
+	$(COQBIN)coqc -I close approx.v
 
 alphaeq2.vo : alphaeq2.v alphaeq.vo
-	coqc -I close alphaeq2.v
+	$(COQBIN)coqc -I close alphaeq2.v
 
 nat_defs.vo : nat_defs.v terms4.vo terms_union.vo
-	coqc -I close nat_defs.v
+	$(COQBIN)coqc -I close nat_defs.v
 
 lsubst_hyps.vo : lsubst_hyps.v list.vo sequents.vo
-	coqc -I close lsubst_hyps.v
+	$(COQBIN)coqc -I close lsubst_hyps.v
 
 rules_equality.vo : rules_equality.v rules_useful.vo per_props_equality.vo per_props_union.vo subst_tacs.vo
-	coqc -I close rules_equality.v
+	$(COQBIN)coqc -I close rules_equality.v
 
 dest_close.vo : dest_close.v type_sys.vo
-	coqc -I close dest_close.v
+	$(COQBIN)coqc -I close dest_close.v
 
 alphaeq_sub.vo : alphaeq_sub.v alphaeq2.vo swap.vo
-	coqc -I close alphaeq_sub.v
+	$(COQBIN)coqc -I close alphaeq_sub.v
 
 alphaeq3.vo : alphaeq3.v alphaeq.vo
-	coqc -I close alphaeq3.v
+	$(COQBIN)coqc -I close alphaeq3.v
 
 per_props_atom.vo : per_props_atom.v per_props.vo
-	coqc -I close per_props_atom.v
+	$(COQBIN)coqc -I close per_props_atom.v
 
 terms5.vo : terms5.v terms4.vo
-	coqc -I close terms5.v
+	$(COQBIN)coqc -I close terms5.v
 
 csubst_cft.vo : csubst_cft.v csubst.vo
-	coqc -I close csubst_cft.v
+	$(COQBIN)coqc -I close csubst_cft.v
 
 per_props_per.vo : per_props_per.v per_props2.vo rwper.vo subst_tacs.vo cequiv_tacs.vo list.vo
-	coqc -I close per_props_per.v
+	$(COQBIN)coqc -I close per_props_per.v
 
 close/close_type_sys_per_isect.vo : close/close_type_sys_per_isect.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_isect.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_isect.v
 
 close/close_type_sys_per_sqequal.vo : close/close_type_sys_per_sqequal.v type_sys.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_sqequal.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_sqequal.v
 
 terms4.vo : terms4.v computation2.vo
-	coqc -I close terms4.v
+	$(COQBIN)coqc -I close terms4.v
 
 rules_classical.vo : rules_classical.v sequents_tacs.vo per_props_union.vo per_props_equality.vo
-	coqc -I close rules_classical.v
+	$(COQBIN)coqc -I close rules_classical.v
 
 rules_move.vo : rules_move.v sequents_tacs.vo sequents_props.vo list.vo
-	coqc -I close rules_move.v
+	$(COQBIN)coqc -I close rules_move.v
 
 LibTactics.vo : LibTactics.v
-	coqc -I close LibTactics.v
+	$(COQBIN)coqc -I close LibTactics.v
 
 stronger_continuity_rule2.vo : stronger_continuity_rule2.v stronger_continuity_rule.vo
-	coqc -I close stronger_continuity_rule2.v
+	$(COQBIN)coqc -I close stronger_continuity_rule2.v
 
 stronger_continuity_defs.vo : stronger_continuity_defs.v continuity_type.vo per_props_set.vo per_props_union.vo per_props_nat.vo alphaeq3.vo
-	coqc -I close stronger_continuity_defs.v
+	$(COQBIN)coqc -I close stronger_continuity_defs.v
 
 sequents.vo : sequents.v per_props_more.vo nuprl.vo list.vo csubst.vo
-	coqc -I close sequents.v
+	$(COQBIN)coqc -I close sequents.v
 
 stronger_continuity_rule4_v3.vo : stronger_continuity_rule4_v3.v stronger_continuity_rule4_v2.vo per_props_psquash.vo substc_more.vo per_props_subtype_rel.vo
-	coqc -I close stronger_continuity_rule4_v3.v
+	$(COQBIN)coqc -I close stronger_continuity_rule4_v3.v
 
 cequiv_props.vo : cequiv_props.v cequiv.vo terms3.vo
-	coqc -I close cequiv_props.v
+	$(COQBIN)coqc -I close cequiv_props.v
 
 rules_squiggle3.vo : rules_squiggle3.v per_props_equality.vo per_props_equality_more.vo per_can.vo
-	coqc -I close rules_squiggle3.v
+	$(COQBIN)coqc -I close rules_squiggle3.v
 
 terms_per.vo : terms_per.v terms_props.vo list.vo
-	coqc -I close terms_per.v
+	$(COQBIN)coqc -I close terms_per.v
 
 sqle.vo : sqle.v approx.vo computation4.vo
-	coqc -I close sqle.v
+	$(COQBIN)coqc -I close sqle.v
 
 stronger_continuity_rule3.vo : stronger_continuity_rule3.v computation9.vo stronger_continuity_rule2.vo
-	coqc -I close stronger_continuity_rule3.v
+	$(COQBIN)coqc -I close stronger_continuity_rule3.v
 
 arith_props.vo : arith_props.v cvterm.vo cequiv.vo
-	coqc -I close arith_props.v
+	$(COQBIN)coqc -I close arith_props.v
 
 stronger_continuity_rule4_v2.vo : stronger_continuity_rule4_v2.v stronger_continuity_rule_v2.vo stronger_continuity_rule4.vo
-	coqc -I close stronger_continuity_rule4_v2.v
+	$(COQBIN)coqc -I close stronger_continuity_rule4_v2.v
 
 rules_squiggle2.vo : rules_squiggle2.v rules_useful.vo
-	coqc -I close rules_squiggle2.v
+	$(COQBIN)coqc -I close rules_squiggle2.v
 
 close/close_type_sys_per_product.vo : close/close_type_sys_per_product.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_product.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_product.v
 
 close/close_type_sys_per_pertype.vo : close/close_type_sys_per_pertype.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_pertype.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_pertype.v
 
 eq_rel.vo : eq_rel.v universe.vo
-	coqc -I close eq_rel.v
+	$(COQBIN)coqc -I close eq_rel.v
 
 psquash.vo : psquash.v computation8.vo substitution3.vo cvterm.vo alphaeq3.vo
-	coqc -I close psquash.v
+	$(COQBIN)coqc -I close psquash.v
 
 terms_image.vo : terms_image.v alphaeq.vo cvterm2.vo terms_props.vo
-	coqc -I close terms_image.v
+	$(COQBIN)coqc -I close terms_image.v
 
 cvterm4.vo : cvterm4.v cequiv.vo cvterm2.vo
-	coqc -I close cvterm4.v
+	$(COQBIN)coqc -I close cvterm4.v
 
 sequents_equality.vo : sequents_equality.v sequents_tacs.vo per_props_equality.vo
-	coqc -I close sequents_equality.v
+	$(COQBIN)coqc -I close sequents_equality.v
 
 sequents_props.vo : sequents_props.v sequents.vo subst_props.vo
-	coqc -I close sequents_props.v
+	$(COQBIN)coqc -I close sequents_props.v
 
 cvterm3.vo : cvterm3.v cvterm2.vo
-	coqc -I close cvterm3.v
+	$(COQBIN)coqc -I close cvterm3.v
 
 close/close_type_sys_per_sqle.vo : close/close_type_sys_per_sqle.v type_sys.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_sqle.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_sqle.v
 
 nuprl_type_sys.vo : nuprl_type_sys.v close_type_sys.vo
-	coqc -I close nuprl_type_sys.v
+	$(COQBIN)coqc -I close nuprl_type_sys.v
 
 prog.vo : prog.v terms2.vo
-	coqc -I close prog.v
+	$(COQBIN)coqc -I close prog.v
 
 approx_star_props1.vo : approx_star_props1.v approx_star_def.vo
-	coqc -I close approx_star_props1.v
+	$(COQBIN)coqc -I close approx_star_props1.v
 
 cvterm2.vo : cvterm2.v cvterm.vo csubst.vo computation3.vo list.vo
-	coqc -I close cvterm2.v
+	$(COQBIN)coqc -I close cvterm2.v
 
 AssociationList.vo : AssociationList.v list.vo
-	coqc -I close AssociationList.v
+	$(COQBIN)coqc -I close AssociationList.v
 
 rules.vo : rules.v swap.vo per_props3.vo rules_struct.vo rules_move.vo bar_induction3.vo axiom_choice.vo rules_squiggle.vo rules_squiggle2.vo rules_squiggle3.vo rules_squiggle4.vo rules_exception.vo rules_decide_exception.vo rules_arith_exception.vo rules_cft_exception.vo rules_apply_exception.vo rules_cbv_exception.vo rules_less_exception.vo rules_arith_callbyvalue.vo rules_cft_callbyvalue.vo rules_halts_spread.vo rules_cft.vo rules_inl_inr_cases.vo rules_axiom_cases.vo rules_integer_ring.vo continuity_stuff.vo rules_functionality.vo rules_set.vo rules_equality.vo rules_equality2.vo rules_tequality.vo rules_isect.vo rules_isect2.vo nuprl_lemmas1.vo nuprl_lemmas2.vo rules_function.vo rules_product.vo rules_image.vo rules_pertype.vo rules_ipertype.vo rules_spertype.vo rules_iper_function.vo rules_w.vo rules_pw3.vo rules_classical.vo rules_partial.vo rules_mono.vo
-	coqc -I close rules.v
+	$(COQBIN)coqc -I close rules.v
 
 approx_star_props2.vo : approx_star_props2.v approx_star_props1.vo
-	coqc -I close approx_star_props2.v
+	$(COQBIN)coqc -I close approx_star_props2.v
 
 lmap.vo : lmap.v list.vo
-	coqc -I close lmap.v
+	$(COQBIN)coqc -I close lmap.v
 
 terms_props.vo : terms_props.v terms2.vo terms_tacs.vo tactics2.vo
-	coqc -I close terms_props.v
+	$(COQBIN)coqc -I close terms_props.v
 
 stronger_continuity_rule4.vo : stronger_continuity_rule4.v substc_more.vo stronger_continuity_rule3.vo
-	coqc -I close stronger_continuity_rule4.v
+	$(COQBIN)coqc -I close stronger_continuity_rule4.v
 
 computation_arith.vo : computation_arith.v computation8.vo
-	coqc -I close computation_arith.v
+	$(COQBIN)coqc -I close computation_arith.v
 
 per_props_top.vo : per_props_top.v per_props.vo
-	coqc -I close per_props_top.v
+	$(COQBIN)coqc -I close per_props_top.v
 
 rules_pw3.vo : rules_pw3.v rules_pw_useful.vo pweq_lemmas.vo
-	coqc -I close rules_pw3.v
+	$(COQBIN)coqc -I close rules_pw3.v
 
 close/close_type_sys_per_eq.vo : close/close_type_sys_per_eq.v type_sys.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_eq.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_eq.v
 
 domain_th.vo : domain_th.v cequiv.vo sqle.vo subst_props.vo library_alpha.vo computation8.vo terms4.vo
-	coqc -I close domain_th.v
+	$(COQBIN)coqc -I close domain_th.v
 
 continuity_rule.vo : continuity_rule.v continuity_type.vo
-	coqc -I close continuity_rule.v
+	$(COQBIN)coqc -I close continuity_rule.v
 
 rules_w.vo : rules_w.v rules_useful.vo per_props_equality.vo
-	coqc -I close rules_w.v
+	$(COQBIN)coqc -I close rules_w.v
 
 rules_squiggle4.vo : rules_squiggle4.v sequents_tacs.vo sequents_equality.vo per_props_equality.vo per_props4.vo
-	coqc -I close rules_squiggle4.v
+	$(COQBIN)coqc -I close rules_squiggle4.v
 
 computation7.vo : computation7.v computation6.vo
-	coqc -I close computation7.v
+	$(COQBIN)coqc -I close computation7.v
 
 library_alpha.vo : library_alpha.v library.vo alphaeq.vo computation3.vo list_tacs.vo substitution2.vo alphaeq2.vo atoms2.vo
-	coqc -I close library_alpha.v
+	$(COQBIN)coqc -I close library_alpha.v
 
 computation_minus.vo : computation_minus.v computation_arith.vo cvterm.vo
-	coqc -I close computation_minus.v
+	$(COQBIN)coqc -I close computation_minus.v
 
 rules_isect.vo : rules_isect.v sequents_tacs.vo per_props_equality.vo rules_tyfam.vo
-	coqc -I close rules_isect.v
+	$(COQBIN)coqc -I close rules_isect.v
 
 close/close_type_sys_per_spertype.vo : close/close_type_sys_per_spertype.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_spertype.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_spertype.v
 
 computation6.vo : computation6.v computation5.vo atom_ren.vo
-	coqc -I close computation6.v
+	$(COQBIN)coqc -I close computation6.v
 
 type_sys_pfam.vo : type_sys_pfam.v type_sys_useful2.vo tactics2.vo
-	coqc -I close type_sys_pfam.v
+	$(COQBIN)coqc -I close type_sys_pfam.v
 
 continuity_defs_ceq.vo : continuity_defs_ceq.v prog.vo cequiv.vo csubst2.vo terms5.vo computation_exc.vo computation_dec1.vo computation8.vo
-	coqc -I close continuity_defs_ceq.v
+	$(COQBIN)coqc -I close continuity_defs_ceq.v
 
 rules_functionality.vo : rules_functionality.v rules_useful.vo sequents_useful.vo sequents_equality.vo
-	coqc -I close rules_functionality.v
+	$(COQBIN)coqc -I close rules_functionality.v
 
 rules_inl_inr_cases.vo : rules_inl_inr_cases.v rules_cft.vo
-	coqc -I close rules_inl_inr_cases.v
+	$(COQBIN)coqc -I close rules_inl_inr_cases.v
 
 rules_cft.vo : rules_cft.v sequents_tacs.vo cequiv_props.vo subst_tacs.vo per_props_equality.vo list.vo
-	coqc -I close rules_cft.v
+	$(COQBIN)coqc -I close rules_cft.v
 
 computation5.vo : computation5.v computation_mark.vo
-	coqc -I close computation5.v
+	$(COQBIN)coqc -I close computation5.v
 
 substitution3.vo : substitution3.v computation2.vo
-	coqc -I close substitution3.v
+	$(COQBIN)coqc -I close substitution3.v
 
 computation_injections.vo : computation_injections.v computation4.vo
-	coqc -I close computation_injections.v
+	$(COQBIN)coqc -I close computation_injections.v
 
 axiom_choice.vo : axiom_choice.v substc_more.vo per_props4.vo
-	coqc -I close axiom_choice.v
+	$(COQBIN)coqc -I close axiom_choice.v
 
 computation_mark.vo : computation_mark.v computation4.vo alphaeq_sub.vo
-	coqc -I close computation_mark.v
+	$(COQBIN)coqc -I close computation_mark.v
 
 variables.vo : variables.v list.vo
-	coqc -I close variables.v
+	$(COQBIN)coqc -I close variables.v
 
 substitution2.vo : substitution2.v alphaeq_sub.vo
-	coqc -I close substitution2.v
+	$(COQBIN)coqc -I close substitution2.v
 
 computation4.vo : computation4.v computation_preserve4.vo
-	coqc -I close computation4.v
+	$(COQBIN)coqc -I close computation4.v
 
 bar_induction.vo : bar_induction.v eq_rel.vo tactics.vo tactics2.vo
-	coqc -I close bar_induction.v
+	$(COQBIN)coqc -I close bar_induction.v
 
 computation3.vo : computation3.v computation_preserve1.vo
-	coqc -I close computation3.v
+	$(COQBIN)coqc -I close computation3.v
 
 approx_props1.vo : approx_props1.v approx.vo atom_ren.vo sqle.vo
-	coqc -I close approx_props1.v
+	$(COQBIN)coqc -I close approx_props1.v
 
 computation2.vo : computation2.v alphaeq.vo computation.vo rel_nterm.vo substitution2.vo list_tacs.vo
-	coqc -I close computation2.v
+	$(COQBIN)coqc -I close computation2.v
 
 UsefulTypes.vo : UsefulTypes.v tactics.vo
-	coqc -I close UsefulTypes.v
+	$(COQBIN)coqc -I close UsefulTypes.v
 
 per_props_subtype_rel.vo : per_props_subtype_rel.v per_props_equality.vo cequiv_tacs.vo
-	coqc -I close per_props_subtype_rel.v
+	$(COQBIN)coqc -I close per_props_subtype_rel.v
 
 per_props_equality.vo : per_props_equality.v per_props.vo
-	coqc -I close per_props_equality.v
+	$(COQBIN)coqc -I close per_props_equality.v
 
 computation1.vo : computation1.v substitution.vo library.vo terms_pk.vo
-	coqc -I close computation1.v
+	$(COQBIN)coqc -I close computation1.v
 
 continuity_per.vo : continuity_per.v per_props_equality_more.vo per_props_set.vo per_props3.vo per_props_nat.vo continuity_defs2.vo
-	coqc -I close continuity_per.v
+	$(COQBIN)coqc -I close continuity_per.v
 
 approx_props3.vo : approx_props3.v approx_props1.vo
-	coqc -I close approx_props3.v
+	$(COQBIN)coqc -I close approx_props3.v
 
 close/close_type_sys_per_set.vo : close/close_type_sys_per_set.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_set.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_set.v
 
 approx_props2.vo : approx_props2.v cequiv.vo
-	coqc -I close approx_props2.v
+	$(COQBIN)coqc -I close approx_props2.v
 
 close/close_type_sys_per_w.vo : close/close_type_sys_per_w.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_w.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_w.v
 
 terms_apply.vo : terms_apply.v terms2.vo
-	coqc -I close terms_apply.v
+	$(COQBIN)coqc -I close terms_apply.v
 
 rules_tequality.vo : rules_tequality.v sequents_tacs.vo per_props2.vo subst_tacs.vo per_props_equality.vo sequents_equality.vo
-	coqc -I close rules_tequality.v
+	$(COQBIN)coqc -I close rules_tequality.v
 
 rules_arith_exception.vo : rules_arith_exception.v computation_minus.vo approx_props2.vo sequents_tacs.vo sequents_tacs2.vo per_props_equality.vo sequents_equality.vo per_props_nat.vo per_can.vo per_props_top.vo integer_type.vo
-	coqc -I close rules_arith_exception.v
+	$(COQBIN)coqc -I close rules_arith_exception.v
 
 library.vo : library.v sovar_alpha.vo atoms.vo
-	coqc -I close library.v
+	$(COQBIN)coqc -I close library.v
 
 stronger_continuity_rule_v2.vo : stronger_continuity_rule_v2.v stronger_continuity_rule.vo
-	coqc -I close stronger_continuity_rule_v2.v
+	$(COQBIN)coqc -I close stronger_continuity_rule_v2.v
 
 continuity_type.vo : continuity_type.v cvterm.vo substitution3.vo continuity_axiom2.vo continuity_type_aux.vo cequiv_tacs.vo subst_tacs.vo continuity_per.vo list.vo
-	coqc -I close continuity_type.v
+	$(COQBIN)coqc -I close continuity_type.v
 
 close/close_type_sys_per_ffatom.vo : close/close_type_sys_per_ffatom.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_ffatom.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_ffatom.v
 
 continuity3_2.vo : continuity3_2.v atoms2.vo computation_seq.vo continuity_defs.vo
-	coqc -I close continuity3_2.v
+	$(COQBIN)coqc -I close continuity3_2.v
 
 continuity.vo : continuity.v computation_seq.vo continuity_defs.vo
-	coqc -I close continuity.v
+	$(COQBIN)coqc -I close continuity.v
 
 atoms.vo : atoms.v terms2.vo sovar.vo
-	coqc -I close atoms.v
+	$(COQBIN)coqc -I close atoms.v
 
 rules_cft_callbyvalue.vo : rules_cft_callbyvalue.v computation_cft.vo computation_cbv.vo approx_props2.vo sequents_tacs.vo sequents_tacs2.vo per_props_equality.vo sequents_equality.vo per_props_nat.vo per_can.vo per_props_top.vo integer_type.vo
-	coqc -I close rules_cft_callbyvalue.v
+	$(COQBIN)coqc -I close rules_cft_callbyvalue.v
 
 bar_induction3.vo : bar_induction3.v bar_induction2.vo sequents_tacs.vo sequents_tacs2.vo per_props_equality.vo per_props_nat.vo
-	coqc -I close bar_induction3.v
+	$(COQBIN)coqc -I close bar_induction3.v
 
 rules_tyfam.vo : rules_tyfam.v rules_useful.vo subst_tacs.vo cequiv_tacs.vo per_props_equality.vo sequents_equality.vo
-	coqc -I close rules_tyfam.v
+	$(COQBIN)coqc -I close rules_tyfam.v
 
 computation_less.vo : computation_less.v computation8.vo cvterm.vo
-	coqc -I close computation_less.v
+	$(COQBIN)coqc -I close computation_less.v
 
 bar_induction2.vo : bar_induction2.v approx_props3.vo bar_induction.vo per_props4.vo cvterm4.vo per_can.vo
-	coqc -I close bar_induction2.v
+	$(COQBIN)coqc -I close bar_induction2.v
 
 rules_partial.vo : rules_partial.v rules_useful.vo domain_th.vo per_props_equality2.vo per_props_equality_more.vo sequents_equality.vo
-	coqc -I close rules_partial.v
+	$(COQBIN)coqc -I close rules_partial.v
 
 close/close_type_sys_per_partial.vo : close/close_type_sys_per_partial.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_partial.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_partial.v
 
 atoms2.vo : atoms2.v atoms.vo library.vo alphaeq2.vo computation_mark.vo
-	coqc -I close atoms2.v
+	$(COQBIN)coqc -I close atoms2.v
 
 list_tacs.vo : list_tacs.v list.vo
-	coqc -I close list_tacs.v
+	$(COQBIN)coqc -I close list_tacs.v
 
 close/close_type_sys_per_teq.vo : close/close_type_sys_per_teq.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_teq.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_teq.v
 
 computation.vo : computation.v substitution.vo computation1.vo
-	coqc -I close computation.v
+	$(COQBIN)coqc -I close computation.v
 
 close_type_sys.vo : close_type_sys.v type_sys_useful2.vo close/close_type_sys_per_init.vo close/close_type_sys_per_int.vo close/close_type_sys_per_atom.vo close/close_type_sys_per_uatom.vo close/close_type_sys_per_base.vo close/close_type_sys_per_sqle.vo close/close_type_sys_per_sqequal.vo close/close_type_sys_per_eq.vo close/close_type_sys_per_teq.vo close/close_type_sys_per_isect.vo close/close_type_sys_per_func.vo close/close_type_sys_per_disect.vo close/close_type_sys_per_pertype.vo close/close_type_sys_per_ipertype.vo close/close_type_sys_per_spertype.vo close/close_type_sys_per_w.vo close/close_type_sys_per_m.vo close/close_type_sys_per_texc.vo close/close_type_sys_per_union.vo close/close_type_sys_per_image.vo close/close_type_sys_per_partial.vo close/close_type_sys_per_admiss.vo close/close_type_sys_per_mono.vo close/close_type_sys_per_ffatom.vo close/close_type_sys_per_set.vo close/close_type_sys_per_tunion.vo close/close_type_sys_per_product.vo close/close_type_sys_per_pw.vo close/close_type_sys_per_pm.vo
-	coqc -I close close_type_sys.v
+	$(COQBIN)coqc -I close close_type_sys.v
 
 computation_seq.vo : computation_seq.v computation6.vo
-	coqc -I close computation_seq.v
+	$(COQBIN)coqc -I close computation_seq.v
 
 rules_iper_function.vo : rules_iper_function.v sequents_tacs.vo subst_tacs.vo cequiv_tacs.vo tactics2.vo per_props_per.vo rwper.vo list.vo
-	coqc -I close rules_iper_function.v
+	$(COQBIN)coqc -I close rules_iper_function.v
 
 stronger_continuity_rule.vo : stronger_continuity_rule.v alphaeq4.vo stronger_continuity_defs4.vo per_props_nat2.vo
-	coqc -I close stronger_continuity_rule.v
+	$(COQBIN)coqc -I close stronger_continuity_rule.v
 
 computation9.vo : computation9.v computation8.vo
-	coqc -I close computation9.v
+	$(COQBIN)coqc -I close computation9.v
 
 stronger_continuity_defs_typ.vo : stronger_continuity_defs_typ.v stronger_continuity_defs.vo stronger_continuity_defs0.vo per_props_atom.vo terms5.vo
-	coqc -I close stronger_continuity_defs_typ.v
+	$(COQBIN)coqc -I close stronger_continuity_defs_typ.v
 
 per_can.vo : per_can.v computation_dec1.vo sequents_tacs.vo
-	coqc -I close per_can.v
+	$(COQBIN)coqc -I close per_can.v
 
 rules_apply_exception.vo : rules_apply_exception.v chalts.vo sequents_tacs2.vo cequiv_props.vo subst_tacs.vo per_props_equality.vo per_can.vo computation_apply.vo cequiv_props2.vo list.vo
-	coqc -I close rules_apply_exception.v
+	$(COQBIN)coqc -I close rules_apply_exception.v
 
 close/close_type_sys_per_texc.vo : close/close_type_sys_per_texc.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_texc.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_texc.v
 
 close/close_type_sys_per_func.vo : close/close_type_sys_per_func.v type_sys_useful.vo dest_close.vo
-	coqc -I close close/close_type_sys_per_func.v
+	$(COQBIN)coqc -I close close/close_type_sys_per_func.v
 
 type_sys_useful2.vo : type_sys_useful2.v type_sys_useful.vo
-	coqc -I close type_sys_useful2.v
+	$(COQBIN)coqc -I close type_sys_useful2.v
 
 computation8.vo : computation8.v computation7.vo
-	coqc -I close computation8.v
+	$(COQBIN)coqc -I close computation8.v
