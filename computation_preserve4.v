@@ -1473,7 +1473,7 @@ Proof.
       exists k1 (S k2); dands; try omega; auto.
       * rw @computes_to_value_in_max_k_steps_S.
         eexists; dands; eauto.
-      * rw NPeano.Nat.add_succ_r.
+      * rw Nat.add_succ_r.
         rw @compute_at_most_k_steps_S2.
         unfold mk_integer, nobnd.
         rw @compute_step_narithop_ncan2; simpl; boolvar; tcsp.
@@ -1499,7 +1499,7 @@ Proof.
       exists k1 (S k2); dands; try omega; auto.
       * rw @computes_to_value_in_max_k_steps_S.
         eexists; dands; eauto.
-      * rw NPeano.Nat.add_succ_r.
+      * rw Nat.add_succ_r.
         rw @compute_at_most_k_steps_S2.
         unfold mk_integer, nobnd.
         rw @compute_step_narithop_abs2; simpl; boolvar; tcsp.
@@ -1627,7 +1627,7 @@ Proof.
       exists c1 c2 k1 (S k2); dands; try omega; auto.
       * rw @computes_to_value_in_max_k_steps_S.
         eexists; dands; eauto.
-      * rw NPeano.Nat.add_succ_r.
+      * rw Nat.add_succ_r.
         rw @compute_at_most_k_steps_S2.
         unfold nobnd.
         rw @compute_step_ncompop_ncan2; simpl; boolvar; tcsp; dcwf h.
@@ -1654,7 +1654,7 @@ Proof.
       exists c1 c2 k1 (S k2); dands; try omega; auto.
       * rw @computes_to_value_in_max_k_steps_S.
         eexists; dands; eauto.
-      * rw NPeano.Nat.add_succ_r.
+      * rw Nat.add_succ_r.
         rw @compute_at_most_k_steps_S2.
         unfold nobnd.
         rw @compute_step_ncompop_abs2; simpl; boolvar; tcsp; dcwf h;[].
@@ -1672,7 +1672,7 @@ Proof.
     exists c1 c2 (S k1) k2; dands; try omega; auto.
     * rw @computes_to_value_in_max_k_steps_S.
       eexists; dands; eauto.
-    * rw NPeano.Nat.add_succ_l.
+    * rw Nat.add_succ_l.
       rw @compute_at_most_k_steps_S2.
       unfold nobnd.
       rw @compute_step_ncompop_ncan1; simpl; boolvar; tcsp.
@@ -1696,7 +1696,7 @@ Proof.
     exists c1 c2 (S k1) k2; dands; try omega; auto.
     * rw @computes_to_value_in_max_k_steps_S.
       eexists; dands; eauto.
-    * rw NPeano.Nat.add_succ_l.
+    * rw Nat.add_succ_l.
       rw @compute_at_most_k_steps_S2.
       unfold nobnd.
       rw @compute_step_ncompop_abs1; simpl; boolvar; tcsp.

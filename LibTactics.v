@@ -47,6 +47,8 @@
   - thanks to Georges Gonthier for the implementation trick in [rapply],
 *)
 
+Require Import OmegaTactic.
+
 Set Implicit Arguments.
 
 (* ********************************************************************** *)
@@ -611,7 +613,7 @@ Definition eq' := @eq.
 Hint Unfold eq'.
 
 Notation "x '='' y" := (@eq' _ x y) 
-  (at level 70, arguments at next level).
+  (at level 70, y at next level).
 
 
 
@@ -2830,7 +2832,7 @@ Tactic Notation "destructs" constr(N) constr(T) :=
 (** Underlying implementation of [branch]. *)
 
 Ltac branch_tactic K N := 
-  match constr:(K,N) with
+  match constr:((K,N)) with
   | (_,0) => fail 1
   | (0,_) => fail 1
   | (1,1) => idtac

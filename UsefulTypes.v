@@ -23,6 +23,7 @@
 
 *)
 
+Require Import OmegaTactic.
 
 (*Require Export SfLib.*)
 Require Export Coq.Init.Notations.
@@ -365,8 +366,8 @@ match d with
 | inr _ => false
 end.
   
-Notation deq_nat := NPeano.Nat.eq_dec.
-Hint Resolve NPeano.Nat.eq_dec : Deq.
+Notation deq_nat := Nat.eq_dec.
+Hint Resolve Nat.eq_dec : Deq.
 
 
 
@@ -520,7 +521,7 @@ Lemma Fin_decidable : forall (n:nat), Deq (Fin n).
 Proof.
   unfold Deq.
   intros.
-  destruct (NPeano.Nat.eq_dec (projT1 x) (projT1 y)) as [T|F];[left|right].
+  destruct (Nat.eq_dec (projT1 x) (projT1 y)) as [T|F];[left|right].
   - apply Fin_eq; auto.
   - intro Heq. destruct F. destruct x. destruct y.
     inverts Heq. allsimpl. reflexivity.
@@ -683,7 +684,7 @@ Qed.
  Let projT {A : Type} {x: A} (dec: Deq A)
   {P:A -> Type} (exP: sigT P) (def:P x) : P x :=
    match exP with
-     | existT x' prf =>
+     | existT _ x' prf =>
        match dec x' x with
          | left eqprf => eq_rect x' P prf x eqprf
          | _ => def

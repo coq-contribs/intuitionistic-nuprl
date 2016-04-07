@@ -3046,7 +3046,7 @@ Fixpoint get_ints_from_red_atmost {o}
       fun comp =>
         get_ints t
                  ++ match implies_reduces_in_atmost_k_steps_S lib t u n comp with
-                      | existT w (c,r) => get_ints_from_red_atmost lib w u n r
+                      | existT _ w (c,r) => get_ints_from_red_atmost lib w u n r
                     end
   end.
 
@@ -3055,7 +3055,7 @@ Definition get_ints_from_computation {o}
            (t u : @NTerm o)
            (comp : reduces_to lib t u) : list Z :=
   match comp with
-    | existT k r => get_ints_from_red_atmost lib t u k r
+    | existT _ k r => get_ints_from_red_atmost lib t u k r
   end.
 
 Lemma get_ints_from_red_atmost_head {o} :

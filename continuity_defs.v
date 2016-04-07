@@ -305,7 +305,7 @@ Proof.
   pose proof (alpha_bterm_change
                 bt lv nt lvn
                 aeq disj norep len) as h.
-  unfold lsubst in h; simpl h; boolvar; auto.
+  unfold lsubst in h. boolvar; auto.
   provefalse; destruct n.
   rw @range_var_ren; auto.
   rw flat_map_map.

@@ -3685,8 +3685,8 @@ Proof.
           { SSSSCase "Exc".
 
             csunf Hcomp; csunf; allsimpl; cpx.
-            apply compute_step_catch_success in Hcomp;
-              repdors; exrepnd; subst; cpx; allsimpl; auto;
+            apply compute_step_catch_success in Hcomp.
+              repdors; exrepnd; subst; move Hlen after H1alarg; cpx; allsimpl; auto;
               fold_terms; allrw @fold_exception; cpx.
 
             + destruct x.

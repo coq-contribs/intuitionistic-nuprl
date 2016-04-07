@@ -2477,7 +2477,12 @@ Proof.
           apply isprogram_fix; eauto 2 with slow
          |repeat (prove_approx_star; eauto 2 with slow; prove_isprogram);
            try (apply alpha_implies_approx_star; eauto 3 with slow)];[].
-
+(* BEGIN HACK: there must be a better way *)
+Unshelve.
+2:apply nil.
+2:apply nil.
+2:apply nil.
+(* END HACK *)
       eapply approx_star_open_trans;[exact ca0|].
       apply approx_implies_approx_open.
       apply reduces_to_implies_approx_eauto; try (rw <- @isprogram_fix_iff; auto).
@@ -2486,7 +2491,7 @@ Proof.
       eapply reduces_to_if_step.
       csunf; simpl; auto.
     }
-
+    
   - apply isexc_implies in Hcv0; auto; exrepnd; subst.
     csunf XX1; allsimpl; ginv.
     apply reduces_atmost_exc in XX0; subst.
@@ -7835,7 +7840,12 @@ Proof.
         }
 
         { apply reduces_to_implies_approx1; auto.
-          { apply isprogram_fix; eauto 3 with slow. }
+          { apply isprogram_fix; eauto 3 with slow.
+            (* BEGIN HACK: there must be a better way *)
+            Unshelve.
+            apply nil.
+            (* END HACK *)
+          }
           { apply reduces_to_if_step; reflexivity. }
         }
 
@@ -7853,7 +7863,12 @@ Proof.
         }
 
         { apply reduces_to_implies_approx1; auto.
-          { apply isprogram_fix; eauto 3 with slow. }
+          { apply isprogram_fix; eauto 3 with slow.
+            (* BEGIN HACK: there must be a better way *)
+            Unshelve.
+            apply nil.
+            (* END HACK *)
+          }
           { apply reduces_to_if_step; reflexivity. }
         }
 

@@ -3826,7 +3826,7 @@ Definition fresh_nrut_sub {o}
            (vs : list NVar) : Sub :=
   let atoms' := remove_repeats (get_patom_deq o) atoms in
   match fresh_vars (length atoms') vs with
-    | existT l _ => combine l (map mk_utoken atoms')
+    | existT _ l _ => combine l (map mk_utoken atoms')
   end.
 
 Lemma nrut_sub_fresh_nrut_sub {o} :

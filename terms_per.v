@@ -161,10 +161,10 @@ Hint Resolve isprog_vars_erase_rel : isprog.
 Hint Resolve isprog_vars_erase : isprog.
 
 Definition erasec_rel {p} (A : @CTerm p) : CTerm :=
-  let (a,x) := A in existT isprog (erase_rel a) (isprog_erase_rel a x).
+  let (a,x) := A in exist isprog (erase_rel a) (isprog_erase_rel a x).
 
 Definition erasec {p} (A : @CTerm p) : CTerm :=
-  let (a,x) := A in existT isprog (erase a) (isprog_erase a x).
+  let (a,x) := A in exist isprog (erase a) (isprog_erase a x).
 
 Lemma erasec_eq {p} :
   forall A, @erasec p A = mkc_pertype (erasec_rel A).
@@ -377,7 +377,7 @@ Qed.
 Definition mkc_per_function_rel {o} (A B : @CTerm o) : CTerm :=
   let (a,x) := A in
   let (b,y) := B in
-  existT isprog (mk_per_function_rel a b) (isprog_mk_per_function_rel a b x y).
+  exist isprog (mk_per_function_rel a b) (isprog_mk_per_function_rel a b x y).
 
 
 (* ------ iper-function ------ *)
@@ -554,7 +554,7 @@ Qed.
 Definition mkc_iper_function_rel {o} (A B : @CTerm o) : CTerm :=
   let (a,x) := A in
   let (b,y) := B in
-  existT isprog (mk_iper_function_rel a b) (isprog_mk_iper_function_rel a b x y).
+  exist isprog (mk_iper_function_rel a b) (isprog_mk_iper_function_rel a b x y).
 
 
 
