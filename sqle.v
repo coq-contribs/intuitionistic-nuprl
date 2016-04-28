@@ -149,7 +149,7 @@ Proof.
     applydup_clear Hbc2 in Hcb. exrepnd.
     exists tr_subterms0; sp.
     revert Hcv1 Hcb1.
-    apply trans_lblift; auto; eauto with respects_alpha.
+    apply trans_lblift; auto; eauto.
 
   - introv Hcv.
     applydup_clear Hab3 in Hcv. exrepnd.

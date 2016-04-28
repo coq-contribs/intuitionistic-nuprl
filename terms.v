@@ -159,7 +159,7 @@ Fixpoint opred (o : ord) : opred_type o -> ord :=
                           | Some t  => opred o' t
                         end
     | OL f  => fun i => match i with
-                          | existT n t => opred (f n) t
+                          | existT _ n t => opred (f n) t
                         end
   end.
 

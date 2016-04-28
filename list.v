@@ -23,7 +23,7 @@
 
 *)
 
-
+Require Export OmegaTactic.
 Require Export bin_rels.
 Require Export tactics2.
 
@@ -2898,9 +2898,9 @@ Lemma FilterLIn : forall
 forall x l, LIn x (filter f l) <=> LIn x l # f x = true.
 Proof.
   induction l; simpl.
-  intuition.
-  intros.
-  case_eq (f a); intros; simpl; intuition congruence.
+  - dintuition.
+  - intros.
+    case_eq (f a); intros; simpl; dintuition congruence.
 Qed.
 
 Lemma monotoneFilter:
@@ -3158,7 +3158,7 @@ Proof.
   repnd; cpx.
   dorn Hyp0; subst; cpx;
   [|apply IHlen in Hyp0; dands; cpx; 
-      rewrite <- NPeano.Nat.add_succ_r ; cpx].
+      rewrite <- Nat.add_succ_r ; cpx].
   dands; cpx.
   introv Hgt Hlt.
   SetReasoning.

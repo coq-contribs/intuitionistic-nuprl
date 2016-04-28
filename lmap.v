@@ -210,7 +210,7 @@ Qed.
 Definition proj_as_option {A Q: Type} {P : A->Type} (a': {a : A & (P a)} + Q)
   : option A :=
   match a' with
-    | inl (existT a' _) => Some a'
+    | inl (existT _ a' _) => Some a'
     |  inr _ => None
   end.
 
