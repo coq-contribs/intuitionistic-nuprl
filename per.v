@@ -1776,6 +1776,8 @@ Definition close_compute {p} lib (ts : cts) (T1 T2 : @CTerm p) (eq : per(p)) :=
 
  *)
 
+Set Asymmetric Patterns.
+
 Inductive close {p} lib (ts : cts) (T T' : @CTerm p) (eq : per(p)) : [U] :=
   | CL_init     : ts T T' eq -> close lib ts T T' eq
   | CL_int      : per_int      lib (close lib ts) T T' eq -> close lib ts T T' eq
