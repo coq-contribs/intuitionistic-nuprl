@@ -462,7 +462,7 @@ Proof.
   apply newvars5_prop in Heqp; repnd; allsimpl.
   allrw app_nil_r.
 
-  allrw @isprog_vars_lam_iff.
+  do 2 rw @isprog_vars_lam_iff.
   rw <- @isprog_vars_isect_iff.
   rw <- @isprog_vars_isect_iff.
   rw <- @isprog_vars_isect_iff.
