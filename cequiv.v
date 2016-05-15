@@ -745,6 +745,8 @@ Proof.
   allunfold @nobnd.
   repeat(alpharelbtd).
   foldlifts.
+  Remove Hints lsubst_trivial_alpha : slow.
+  Remove Hints alpha_eq_refl : slow.
   eexists; eexists; eexists; dands; eauto 10 with slow.
 Qed.
 
@@ -3190,7 +3192,7 @@ Proof.
   applydup @cequiv_isprog in k2 as ispa.
   applydup @cequiv_isprog in k1 as ispb.
   repnd.
-  exists (existT _ a' ispa) (existT _ b' ispb); simpl.
+  exists (exist _ a' ispa) (exist _ b' ispb); simpl.
   dands; auto.
 Qed.
 
