@@ -2406,6 +2406,10 @@ Proof.
     apply reduces_to_if_step; reflexivity.
 Qed.
 
+(* To avoid "eauto with slow" to find a solution which generates evars from a K-redex *)
+(* at the three lines marked with (**) *)
+Remove Hints lsubst_trivial_alpha : slow.
+
 Lemma extensional_fix {p} : extensional_op (@NCan p NFix).
 Proof.
   introv Hpra Hprt Hprt' Hcv Has Hi.
@@ -2475,8 +2479,8 @@ Proof.
         try prove_isprogram;
         [|apply isprogram_apply; eauto 2 with slow;
           apply isprogram_fix; eauto 2 with slow
-         |repeat (prove_approx_star; eauto 2 with slow; prove_isprogram);
-           try (apply alpha_implies_approx_star; eauto 3 with slow)];[].
+         | repeat (prove_approx_star; eauto 2 with slow; prove_isprogram); (**)
+           try (apply alpha_implies_approx_star; eauto 3 with slow)].
 
       eapply approx_star_open_trans;[exact ca0|].
       apply approx_implies_approx_open.
@@ -7835,7 +7839,7 @@ Proof.
         }
 
         { apply reduces_to_implies_approx1; auto.
-          { apply isprogram_fix; eauto 3 with slow. }
+          { apply isprogram_fix; eauto 3 with slow. } (**)
           { apply reduces_to_if_step; reflexivity. }
         }
 
@@ -7853,7 +7857,7 @@ Proof.
         }
 
         { apply reduces_to_implies_approx1; auto.
-          { apply isprogram_fix; eauto 3 with slow. }
+          { apply isprogram_fix; eauto 3 with slow. } (**)
           { apply reduces_to_if_step; reflexivity. }
         }
 
