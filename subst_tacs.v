@@ -247,9 +247,9 @@ Ltac lsubstc_snoc_app :=
   match goal with
     | [ H1 : !LIn ?x (free_vars ?t), H2 : context[lsubstc ?t ?w (snoc ?s1 (?x, ?a) ++ ?s2) ?c] |- _ ] =>
       let h := fresh "h" in
-      let c := fresh "c" in
+      let c' := fresh "c" in
       pose proof (lsubstc_snoc_app t s1 s2 x a w c H1) as h;
-        destruct h as [c h];
+        destruct h as [c' h];
         rewrite h in H2;
         clear h;
         clear_irr
