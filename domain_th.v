@@ -113,7 +113,7 @@ Lemma is_approx_chain_fix_aprox {o} : forall lib (f : @NTerm o),
   isprogram f
   -> is_approx_chain lib (fun n => fix_approx n f).
 Proof.
-  introv Hpr. unfolds_base.
+  introv Hpr. unfolds_base. red.
   induction n as [| n Hind].
   - simpl. apply bottom_approx_any. repeat(decomp_progc); sp. split; sp.
   - remember (S n) as sn. simpl. remember (mk_apply f (fix_approx sn f)) as XX.
@@ -131,7 +131,7 @@ Lemma fix_approx_ub {o} : forall lib f,
   @isprogram o f
   -> is_approx_ub lib (fun n => fix_approx n f) (mk_fix f).
 Proof.
-  introv Hpr. unfolds_base.
+  introv Hpr. unfolds_base. red.
   induction n as [| n Hind].
   - simpl. apply bottom_approx_any. repeat(decomp_progc); sp.
   - simpl. apply approx_trans with (b:= (mk_apply f (mk_fix f))).
@@ -9334,7 +9334,7 @@ Proof.
       applydup @cequiv_isprogram in Hcv1; repnd.
       allunfold @computes_to_value; repnd.
 
-      eapply crary_5_9_really_aux_seq in comp1; try (exact Hub1); try (exact IHmm); try (exact comp5); eauto 2 with slow;
+      eapply crary_5_9_really_aux_seq in comp1; try (exact Hub1); try (exact IHmm); try (exact comp5); simpl; eauto 2 with slow;
       [|unfold apply_bterm; simpl; autorewrite with slow; auto];[].
       exrepnd.
       eexists; dands; eauto.
@@ -9366,7 +9366,7 @@ Proof.
 
       allunfold @computes_to_value; repnd.
 
-      eapply crary_5_9_really_aux_seq in comp1; try (exact Hub1); try (exact IHmm); try (exact comp5); eauto 2 with slow;
+      eapply crary_5_9_really_aux_seq in comp1; try (exact Hub1); try (exact IHmm); try (exact comp5); simpl; eauto 2 with slow;
       [|unfold apply_bterm; simpl; autorewrite with slow; auto];[].
       exrepnd.
       eexists; dands; eauto.
