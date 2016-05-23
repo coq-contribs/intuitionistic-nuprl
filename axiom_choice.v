@@ -155,7 +155,7 @@ Proof.
                       lib
                       (f1 (existT _ (mkc_nat n) (nat_in_nat lib n)))
                       (fst (fc (existT _ (mkc_nat n) (nat_in_nat lib n)))) with
-                | existT k _ => k
+                | existT _ k _ => k
               end).
     introv mem.
     dands.

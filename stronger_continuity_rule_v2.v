@@ -1618,7 +1618,7 @@ Proof.
     applydup @reduces_to_preserves_isprog in h2;
     [|apply isprog_apply; complete (eauto 3 with slow)].
 
-    exists (existT _ t2' h3) (existT _ t3' h4); simpl.
+    exists (exist _ t2' h3) (exist _ t3' h4); simpl.
     unfold spfexc_pair in h1; exrepnd; subst.
     dands; auto.
     right; dands; tcsp; apply cequiv_spfexc.
