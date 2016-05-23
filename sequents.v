@@ -5704,7 +5704,7 @@ Hint Immediate args_constraints_nil.
 Lemma weak_consistency {o} :
   forall lib (t : @NTerm o),
     wf_term t
-    -> !rule_true lib (mk_rule (mk_baresequent [] (mk_concl mk_false t)) [] []).
+    -> rule_true lib (mk_rule (mk_baresequent [] (mk_concl mk_false t)) [] []) -> False.
 Proof.
   introv wft rt; unfold rule_true in rt; allsimpl.
   assert (wf_sequent (mk_baresequent [] (mk_concl mk_false t))) as wg
