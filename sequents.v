@@ -4160,7 +4160,7 @@ Definition sequent_true_at {o}
                   (lsubstc T wt sub2 (seq_cover_typ2 lib T ts ts' hs ct e))
                 #
                 match ec with
-                  | Some (existT ext (we, ce)) =>
+                  | Some (existT _ ext (we, ce)) =>
                       equality lib
                         (lsubstc ext we sub1 (seq_cover_ex1 lib ext ts ts' hs ce e))
                         (lsubstc ext we sub2 (seq_cover_ex2 lib ext ts ts' hs ce e))
@@ -4213,7 +4213,7 @@ Lemma sequent_true_at_all {o} :
             forall pC1 : cover_vars T sub1,
             forall pC2 : cover_vars T sub2,
               match ec with
-                | Some (existT ext (we, ce)) =>
+                | Some (existT _ ext (we, ce)) =>
                     forall pt1 : cover_vars ext sub1,
                     forall pt2 : cover_vars ext sub2,
                       tequality lib (lsubstc T wt sub1 pC1)
@@ -4262,7 +4262,7 @@ Lemma sequent_true_at_ex {o} :
                             (lsubstc T wt sub2 pC2)
                   #
                   match ec with
-                    | Some (existT ext (we, ce)) =>
+                    | Some (existT _ ext (we, ce)) =>
                         {pt1 : cover_vars ext sub1
                          & {pt2 : cover_vars ext sub2
                          & equality lib (lsubstc ext we sub1 pt1)
@@ -4388,7 +4388,7 @@ Definition KC_sequent_true {o} lib (S : @csequent o) : Type :=
                       (lsubstc T wt s2 (scover_typ2 lib T s1 s2 H ct p))
             #
             match ec with
-              | Some (existT ext (we, ce)) =>
+              | Some (existT _ ext (we, ce)) =>
                   equality lib (lsubstc ext we s1 (scover_ex1 lib ext s1 s2 H ce p))
                            (lsubstc ext we s2 (scover_ex2 lib ext s1 s2 H ce p))
                            (lsubstc T wt s1 (scover_typ1 lib T s1 s2 H ct p))
@@ -4409,7 +4409,7 @@ Lemma KC_sequent_true_all {o} :
             forall pC1 : cover_vars T s1,
             forall pC2 : cover_vars T s2,
               match ec with
-                | Some (existT ext (we, ce)) =>
+                | Some (existT _ ext (we, ce)) =>
                     forall pt1 : cover_vars ext s1,
                     forall pt2 : cover_vars ext s2,
                       tequality lib (lsubstc T wt s1 pC1)
@@ -4452,7 +4452,7 @@ Lemma KC_sequent_true_ex {o} :
                            (lsubstc T wt s2 pC2)
                  #
                  match ec with
-                    | Some (existT ext (we, ce)) =>
+                    | Some (existT _ ext (we, ce)) =>
                         {pt1 : cover_vars ext s1
                           & {pt2 : cover_vars ext s2
                              & equality lib (lsubstc ext we s1 pt1)
@@ -4562,7 +4562,7 @@ Definition AN_sequent_true {o} lib (S : @csequent o) : Type :=
                  (lsubstc T wt s2 (s_cover_typ2 lib T s1 s2 H ct p))
                #
                match ec with
-                 | Some (existT ext (we, ce)) =>
+                 | Some (existT _ ext (we, ce)) =>
                      equality lib
                        (lsubstc ext we s1 (s_cover_ex1 lib ext s1 s2 H ce p))
                        (lsubstc ext we s2 (s_cover_ex2 lib ext s1 s2 H ce p))
@@ -4592,7 +4592,7 @@ Definition VR_sequent_true {o} lib (S : @csequent o) : Type :=
                  (lsubstc T wt s1 (s_cover_typ1 lib T s1 s2 H ct p))
                  (lsubstc T wt s2 (s_cover_typ2 lib T s1 s2 H ct p))
                # match ec with
-                   | Some (existT ext (we, ce)) =>
+                   | Some (existT _ ext (we, ce)) =>
                        equality lib
                          (lsubstc ext we s1 (s_cover_ex1 lib ext s1 s2 H ce p))
                          (lsubstc ext we s2 (s_cover_ex2 lib ext s1 s2 H ce p))
@@ -4613,7 +4613,7 @@ Definition AN_sequent_true_pairwise {o} lib (S : @csequent o) : Type :=
             -> tequality lib (lsubstc T wt s1 (s_cover_typ1 lib T s1 s2 H ct p))
                          (lsubstc T wt s2 (s_cover_typ2 lib T s1 s2 H ct p))
                # match ec with
-                   | Some (existT ext (we, ce)) =>
+                   | Some (existT _ ext (we, ce)) =>
                        equality lib (lsubstc ext we s1 (s_cover_ex1 lib ext s1 s2 H ce p))
                                 (lsubstc ext we s2 (s_cover_ex2 lib ext s1 s2 H ce p))
                                 (lsubstc T wt s1 (s_cover_typ1 lib T s1 s2 H ct p))
@@ -4676,7 +4676,7 @@ Definition AN_sp_sequent_true {o} lib (S : @csequent o) : Type :=
             tequality lib (lsubstc T wt s1 (s_cover_typ_1 lib T s1 s2 H ct p))
                       (lsubstc T wt s2 (s_cover_typ_2 lib T s1 s2 H ct p))
             # match ec with
-                | Some (existT ext (we, ce)) =>
+                | Some (existT _ ext (we, ce)) =>
                     equality lib (lsubstc ext we s1 (s_cover_ex_1 lib ext s1 s2 H ce p))
                              (lsubstc ext we s2 (s_cover_ex_2 lib ext s1 s2 H ce p))
                              (lsubstc T wt s1 (s_cover_typ_1 lib T s1 s2 H ct p))
@@ -4698,7 +4698,7 @@ Lemma AN_sequent_true_all {o} :
                  forall pC2 : cover_vars T s2,
                    similarity lib s1 s2 H
                    -> match ec with
-                        | Some (existT ext (we, ce)) =>
+                        | Some (existT _ ext (we, ce)) =>
                             forall pt1 : cover_vars ext s1,
                             forall pt2 : cover_vars ext s2,
                               tequality lib (lsubstc T wt s1 pC1)
@@ -4747,7 +4747,7 @@ Lemma AN_sequent_true_ex {o} :
                                       (lsubstc T wt s2 pC2)
                             #
                             match ec with
-                              | Some (existT ext (we, ce)) =>
+                              | Some (existT _ ext (we, ce)) =>
                                   {pt1 : cover_vars ext s1
                                    & {pt2 : cover_vars ext s2
                                       & equality lib (lsubstc ext we s1 pt1)
@@ -4803,7 +4803,7 @@ Lemma VR_sequent_true_all {o} :
               similarity lib s1 s2 H
               -> hyps_functionality lib s1 H
               -> match ec with
-                   | Some (existT ext (we, ce)) =>
+                   | Some (existT _ ext (we, ce)) =>
                        forall pt1 : cover_vars ext s1,
                        forall pt2 : cover_vars ext s2,
                          tequality lib (lsubstc T wt s1 pC1)
@@ -4850,7 +4850,7 @@ Lemma VR_sequent_true_ex {o} :
                                  (lsubstc T wt s2 pC2)
                        #
                        match ec with
-                         | Some (existT ext (we, ce)) =>
+                         | Some (existT _ ext (we, ce)) =>
                              {pt1 : cover_vars ext s1
                                & {pt2 : cover_vars ext s2
                                   & equality lib (lsubstc ext we s1 pt1)
@@ -4905,7 +4905,7 @@ Lemma AN_sp_sequent_true_all {o} :
           forall pC1 : cover_vars T s1,
           forall pC2 : cover_vars T s2,
             match ec with
-              | Some (existT ext (we, ce)) =>
+              | Some (existT _ ext (we, ce)) =>
                   forall pt1 : cover_vars ext s1,
                   forall pt2 : cover_vars ext s2,
                     tequality lib (lsubstc T wt s1 pC1)
@@ -4948,7 +4948,7 @@ Lemma AN_sp_sequent_true_ex {o} :
                             (lsubstc T wt s2 pC2)
                   #
                   match ec with
-                    | Some (existT ext (we, ce)) =>
+                    | Some (existT _ ext (we, ce)) =>
                         {pt1 : cover_vars ext s1
                       & {pt2 : cover_vars ext s2
                       & equality lib (lsubstc ext we s1 pt1)

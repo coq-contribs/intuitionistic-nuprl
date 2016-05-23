@@ -929,7 +929,7 @@ Definition meta_seq_NA_nat {o} {lib} {X : @CTerm o} (x : meta_seq_NA lib X) : na
 
 Definition meta_seq_NA_seq {o} {lib} {X : @CTerm o} (x : meta_seq_NA lib X) : CTerm :=
   match x with
-    | existT _ (existT s _) => s
+    | existT _ _ (existT _ s _) => s
   end.
 
 Definition barind_meta_ind_cont2 {o} lib (X : @CTerm o) v :=
@@ -1012,13 +1012,13 @@ Definition mk_meta_kseq_NA {o} {lib} {n : nat} {A : @CTerm o}
 Definition meta_kseq_NA_nat {o} {lib} {n : nat} {A : @CTerm o}
            (x : meta_kseq_NA lib n A) : nat:=
   match x with
-    | existT m _ => m
+    | existT _ m _ => m
   end.
 
 Definition meta_kseq_NA_seq {o} {lib} {n : nat} {A : @CTerm o}
            (x : meta_kseq_NA lib n A) : CTerm:=
   match x with
-    | existT _ (existT s _) => s
+    | existT _ _ (existT _ s _) => s
   end.
 
 Lemma eq_kseq_0 {o} :
@@ -1488,13 +1488,13 @@ Definition mk_meta_kseq_NA2 {o} {lib} {n : nat} {A : @CTerm o} {v}
 Definition meta_kseq_NA2_nat {o} {lib} {n : nat} {A : @CTerm o} {v}
            (x : meta_kseq_NA2 lib n A v) : nat:=
   match x with
-    | existT m _ => m
+    | existT _ m _ => m
   end.
 
 Definition meta_kseq_NA2_seq {o} {lib} {n : nat} {A : @CTerm o} {v}
            (x : meta_kseq_NA2 lib n A v) : CTerm:=
   match x with
-    | existT _ (existT s _) => s
+    | existT _ _ (existT _ s _) => s
   end.
 
 Lemma cequivc_seq2kseq_twice {o} :
@@ -2934,12 +2934,12 @@ Definition meta_fun_seq_NA_nat {o} {lib} {X1 X2 : @CTerm o} (x : meta_fun_seq_NA
 
 Definition meta_fun_seq_NA_seq1 {o} {lib} {X1 X2 : @CTerm o} (x : meta_fun_seq_NA lib X1 X2) : CTerm :=
   match x with
-    | existT _ (existT s _) => s
+    | existT _ _ (existT _ s _) => s
   end.
 
 Definition meta_fun_seq_NA_seq2 {o} {lib} {X1 X2 : @CTerm o} (x : meta_fun_seq_NA lib X1 X2) : CTerm :=
   match x with
-    | existT _ (existT _ (existT s _)) => s
+    | existT _ _ (existT _ _ (existT _ s _)) => s
   end.
 
 Definition barind_meta_fun_ind_cont2 {o} lib (X1 X2 : @CTerm o) v :=
@@ -3020,19 +3020,19 @@ Definition mk_meta_fun_kseq_NA {o} {lib} {n : nat} {A1 A2 : @CTerm o} {v}
 Definition meta_fun_kseq_NA_nat {o} {lib} {n : nat} {A1 A2 : @CTerm o} {v}
            (x : meta_fun_kseq_NA lib n A1 A2 v) : nat:=
   match x with
-    | existT m _ => m
+    | existT _ m _ => m
   end.
 
 Definition meta_fun_kseq_NA_seq1 {o} {lib} {n : nat} {A1 A2 : @CTerm o} {v}
            (x : meta_fun_kseq_NA lib n A1 A2 v) : CTerm:=
   match x with
-    | existT _ (existT s _) => s
+    | existT _ _ (existT _ s _) => s
   end.
 
 Definition meta_fun_kseq_NA_seq2 {o} {lib} {n : nat} {A1 A2 : @CTerm o} {v}
            (x : meta_fun_kseq_NA lib n A1 A2 v) : CTerm:=
   match x with
-    | existT _ (existT _ (existT s _)) => s
+    | existT _ _ (existT _ _ (existT _ s _)) => s
   end.
 
 Fixpoint m_fun_alpha {o}
@@ -3629,7 +3629,7 @@ Definition meta2_fun_seq_NA_nat {o} {lib} {P} {X : @CTerm o} (x : meta2_fun_seq_
 
 Definition meta2_fun_seq_NA_seq {o} {lib} {P} {X : @CTerm o} (x : meta2_fun_seq_NA lib P X) : CTerm :=
   match x with
-    | existT _ (existT s _) => s
+    | existT _ _ (existT _ s _) => s
   end.
 
 Definition barind_meta2_fun_ind_cont2 {o} lib P (X : @CTerm o) v :=
@@ -3703,13 +3703,13 @@ Definition mk_meta2_fun_kseq_NA {o} {lib} {P} {n : nat} {A : @CTerm o} {v}
 Definition meta2_fun_kseq_NA_nat {o} {lib} {P} {n : nat} {A : @CTerm o} {v}
            (x : meta2_fun_kseq_NA lib P n A v) : nat:=
   match x with
-    | existT m _ => m
+    | existT _ m _ => m
   end.
 
 Definition meta2_fun_kseq_NA_seq {o} {lib} {P} {n : nat} {A : @CTerm o} {v}
            (x : meta2_fun_kseq_NA lib P n A v) : CTerm:=
   match x with
-    | existT _ (existT s _) => s
+    | existT _ _ (existT _ s _) => s
   end.
 
 Fixpoint meta2_fun_alpha {o}

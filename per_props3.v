@@ -909,7 +909,8 @@ Fixpoint linear_search
       (k : nat)
       (b : before_witness P k) : {x : Z # nat | P (fst x) (snd x)} :=
   match P_search P dec k with
-    | inl p => p
+
+    | inl p => sig_of_sigT p
     | inr a => linear_search P dec (S k) (inv_before_witness P k b a)
   end.
 
@@ -1037,7 +1038,7 @@ Proof.
                                                  then u ===>(lib) mkc_axiom # v ===>(lib) mkc_axiom
                                                  else False) -> False)})
               (t t' : @CTerm o) =>
-            (exists eqa, close lib (univi lib (Z.to_nat (projT1 (equality_of_int_imp_t lib a a' (projT1 e)))))
+            (exists eqa, close lib (univi lib (Z.to_nat (proj1_sig (equality_of_int_imp_t lib a a' (projT1 e)))))
                                t t' eqa)).
 
   dands; auto.

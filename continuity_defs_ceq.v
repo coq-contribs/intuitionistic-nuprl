@@ -996,7 +996,7 @@ Proof.
   applydup @cequiv_isprog in ceq2 as isp1.
   applydup @cequiv_isprog in ceq0 as isp2.
   repnd.
-  exists (existT _ x2 isp1) (existT _ c isp2); unfold computes_to_excc; simpl; dands; auto.
+  exists (exist _ x2 isp1) (exist _ c isp2); unfold computes_to_excc; simpl; dands; auto.
 Qed.
 
 Lemma cequivc_utoken_implies {o} :
@@ -2260,7 +2260,7 @@ Proof.
   apply reduces_in_atmost_k_steps_exc_decompose in r; auto; exrepnd.
   applydup @reduces_atmost_preserves_program in r2;
     allrw @isprogram_exception_iff; allrw @isprogram_eq; repnd; auto.
-  exists k1 k2 k3 (existT _ a' r5) (existT _ e' r4); dands; auto.
+  exists k1 k2 k3 (exist _ a' r5) (exist _ e' r4); dands; auto.
 Qed.
 
 Lemma dec_reduces_in_atmost_k_steps_exc {o} :
@@ -2422,7 +2422,7 @@ Proof.
   unfold cequivc in ceq; allsimpl.
   apply cequiv_spexc in ceq; exrepnd.
   applydup @preserve_program_exc2 in ceq0; allrw @isprogram_eq; repnd; auto.
-  exists (existT _ n ceq4) (existT _ e ceq3).
+  exists (exist _ n ceq4) (exist _ e ceq3).
   unfold computes_to_excc, computes_to_valc; simpl; dands; auto.
 Qed.
 
