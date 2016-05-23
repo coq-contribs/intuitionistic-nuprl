@@ -497,7 +497,7 @@ Proof.
          rw flat_map_map; unfold compose; simpl
        |rw <- @lsubst_lsubst_aux;
          [apply btchange_alpha_aux;try omega;auto;
-          allrw disjoint_app_l;dands;eauto 3 with slow;
+          allrw disjoint_app_l;dands;try unfold free_vars_bterm;eauto 3 with slow;
           apply disjoint_singleton_l;auto|];[];
          rw @flat_map_free_var_vars_range; eauto 3 with slow; try omega;
          simpl;allrw app_nil_r; allrw disjoint_cons_l; dands; eauto 3 with slow];
