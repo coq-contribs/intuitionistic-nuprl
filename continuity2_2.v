@@ -30,6 +30,7 @@ Require Export computation_seq.
 Require Export continuity_defs.
 (*Require Export list.  (* why?? *)*)
 
+Unset Regular Subst Tactic.
 
 Inductive differ2 {o} (b : nat) : @NTerm o -> @NTerm o -> Type :=
 | differ2_force_int :

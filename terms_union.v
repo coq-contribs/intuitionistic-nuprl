@@ -28,6 +28,7 @@ Require Export alphaeq.
 Require Export cvterm2.
 Require Export terms_props.
 
+Unset Regular Subst Tactic.
 
 Definition mk_bunion {p} (A B : @NTerm p) :=
   let v := newvarlst [A,B] in
