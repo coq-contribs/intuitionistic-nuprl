@@ -24,6 +24,9 @@
 *)
 
 Require Export computation_preserve1.
+
+Unset Regular Subst Tactic.
+
 (*Require Export list. (* WTF!! *)*)
 (** printing #  $\times$ #×# *)
 (** printing <=>  $\Leftrightarrow$ #&hArr;# *)
@@ -3686,7 +3689,7 @@ Proof.
 
             csunf Hcomp; csunf; allsimpl; cpx.
             apply compute_step_catch_success in Hcomp.
-              repdors; exrepnd; subst; move Hlen after H1alarg; cpx; allsimpl; auto;
+              repdors; exrepnd; subst; cpx; allsimpl; auto;
               fold_terms; allrw @fold_exception; cpx.
 
             + destruct x.

@@ -31,6 +31,7 @@ Require Export computation6.
 (** printing $  $\times$ #×# *)
 (** printing &  $\times$ #×# *)
 
+Unset Regular Subst Tactic.
 
 (* begin hide *)
 
