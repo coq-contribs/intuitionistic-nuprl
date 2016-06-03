@@ -26,6 +26,9 @@
 
 Require Export computation5.
 Require Export computation_preserve5.
+
+Unset Regular Subst Tactic.
+
 (** printing #  $\times$ #×# *)
 (** printing <=>  $\Leftrightarrow$ #&hArr;# *)
 (** printing $  $\times$ #×# *)

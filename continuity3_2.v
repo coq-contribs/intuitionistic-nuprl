@@ -28,6 +28,7 @@ Require Export atoms2.
 Require Export computation_seq.
 Require Export continuity_defs.
 
+Unset Regular Subst Tactic.
 
 Inductive differ3 {o} (b : nat) (f g : NTerm)
 : @NTerm o -> @NTerm o -> Type :=
