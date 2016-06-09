@@ -24,8 +24,6 @@
 *)
 
 
-Add LoadPath "../".
-
 Require Export type_sys_pfam.
 Require Import dest_close.
 Require Import pweq_lemmas.
