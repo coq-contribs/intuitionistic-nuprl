@@ -769,3 +769,6 @@ type_sys_useful2.vo : type_sys_useful2.v type_sys_useful.vo
 
 computation8.vo : computation8.v computation7.vo
 	$(COQBIN)coqc -Q close "" computation8.v
+
+install:
+	# TODO
