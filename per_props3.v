@@ -780,9 +780,9 @@ Definition inv_before_witness :
           in before_witness _ _
           return (forall z n, k = z + n -> ~ P (Z.of_nat z) n # ~ P (Z.opp (Z.of_nat z)) n)
                  -> before_witness P (S k) with
-      | stop_pos z n e p => fun f => match fst (f z n e) p with end
-      | stop_neg z n e p => fun f => match snd (f z n e) p with end
-      | next b => fun _ => b
+      | stop_pos _ _ z n e p => fun f => match fst (f z n e) p with end
+      | stop_neg _ _ z n e p => fun f => match snd (f z n e) p with end
+      | next _ _ b => fun _ => b
     end.
 
 Lemma leS:

@@ -94,7 +94,7 @@ Lemma covered_spM {o} :
 Proof.
   introv nieF niefF nienF.
   unfold spM.
-  allrw @covered_lam.
+  do 2 onerw @covered_lam.
   unfold test2.
   rw @covered_fresh.
   unfold test_try2.
@@ -365,7 +365,7 @@ Proof.
   pose proof (cover_vars_spM F s nieF nifF ninF) as h; apply h in c'; clear h.
 
   dup w as w'.
-  apply wf_term_spMp in w'.
+  apply (wf_term_spMp F) in w'.
   rw @wf_term_spM in w'.
 
   exists w' c'.

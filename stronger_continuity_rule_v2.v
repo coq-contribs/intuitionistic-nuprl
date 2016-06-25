@@ -966,7 +966,7 @@ Proof.
 
       apply (reduces_in_atmost_k_steps_excc_le_exc _ (k1 + k + k0));
         eauto 3 with slow; tcsp;
-        try (apply NPeano.Nat.le_max_l; auto).
+        try (apply Nat.le_max_l; auto).
       pose proof (reduces_in_atmost_k_steps_excc_exception
                     lib k k0 n e (mkc_utoken a) mkc_axiom) as h.
       repeat (autodimp h hyp); tcsp; exrepnd.

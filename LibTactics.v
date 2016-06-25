@@ -48,7 +48,6 @@
 *)
 
 Require Import OmegaTactic.
-
 Set Implicit Arguments.
 
 (* ********************************************************************** *)
