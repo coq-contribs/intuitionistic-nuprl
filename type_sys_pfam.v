@@ -23,6 +23,7 @@
 
 *)
 
+Unset Regular Subst Tactic.
 
 Require Export type_sys_useful2.
 Require Import tactics2.
