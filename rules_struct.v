@@ -26,6 +26,9 @@
 
 Require Export rules_useful.
 Require Export sequents_useful.
+
+Unset Regular Subst Tactic.
+
 (** printing |- $\vdash$ *)
 (** printing ->  $\rightarrow$ *)
 (* begin hide *)
