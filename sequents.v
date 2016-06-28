@@ -28,6 +28,9 @@ Require Export per_props_more.
 Require Export nuprl.
 Require Export list.  (* Why do I have to do that? *)
 Require Export csubst.
+
+Unset Regular Subst Tactic.
+
 (** printing #  $\times$ #×# *)
 (** printing <=>  $\Leftrightarrow$ #&hArr;# *)
 (** printing ~<~  $\preceq$ #⪯# *)
