@@ -32,7 +32,7 @@ Require Export per_props_equality.
 Require Export sequents_equality.
 Require Export rules_tyfam.
 
-Unset Regular Subst.
+Unset Regular Subst Tactic.
 
 (** printing |- $\vdash$ *)
 (** printing ->  $\rightarrow$ *)
