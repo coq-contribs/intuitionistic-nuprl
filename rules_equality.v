@@ -29,6 +29,8 @@ Require Export per_props_equality.
 Require Export per_props_union.
 Require Export subst_tacs.
 
+Unset Regular Subst Tactic.
+
 (** printing |- $\vdash$ *)
 (** printing ->  $\rightarrow$ *)
 
