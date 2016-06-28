@@ -31,6 +31,9 @@ Require Export cequiv_tacs.
 Require Export per_props_equality.
 Require Export sequents_equality.
 Require Export rules_tyfam.
+
+Unset Regular Subst.
+
 (** printing |- $\vdash$ *)
 (** printing ->  $\rightarrow$ *)
 (* begin hide *)
