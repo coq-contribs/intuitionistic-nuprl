@@ -27,6 +27,7 @@
 Require Import sequents_tacs.
 Require Export per_props_equality.
 
+Unset Regular Subst Tactic.
 
 Lemma subtype_equality {o} :
   forall lib (t1 t2 : @CTerm o) T U s s' wt wu ct cu H x wc,
