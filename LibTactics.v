@@ -2281,7 +2281,7 @@ Tactic Notation "inverts" "keep" hyp(H) "as" simple_intropattern(I1)
     clears hypothesis [H]. *)
 
 Tactic Notation "inverts" hyp(H) :=
-  inverts keep H; clear H.
+  inverts keep H; try clear H.
 
 (** [inverts H as X1 .. XN] is the same as [inverts keep H as X1 .. XN]
     but it also clears the hypothesis [H]. *)
