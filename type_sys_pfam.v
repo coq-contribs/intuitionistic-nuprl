@@ -28,6 +28,8 @@ Unset Regular Subst Tactic.
 Require Export type_sys_useful2.
 Require Import tactics2.
 
+Unset Regular Subst Tactic.
+
 (*
 Lemma lblift_cequiv4 :
   forall a b c d bterms,
