@@ -31,6 +31,7 @@ Require Export library_alpha.
 Require Export computation8.
 Require Export terms4.
 
+Unset Regular Subst Tactic.
 
 (** printing #  $\times$ #×# *)
 (** printing <=>  $\Leftrightarrow$ #&hArr;# *)
