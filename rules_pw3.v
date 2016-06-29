@@ -26,6 +26,9 @@
 
 Require Import rules_pw_useful.
 Require Import pweq_lemmas.
+
+Unset Regular Subst Tactic.
+
 (** printing |- $\vdash$ *)
 (** printing ->  $\rightarrow$ *)
 (* begin hide *)
