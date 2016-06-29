@@ -26,6 +26,7 @@
 
 Require Export stronger_continuity_rule.
 
+Unset Regular Subst Tactic.
 
 Definition mk_nat2T {o} T : @NTerm o := mk_fun mk_tnat T.
 Definition mk_natk2T {o} (t : @NTerm o) T : @NTerm o := mk_fun (mk_natk t) T.
