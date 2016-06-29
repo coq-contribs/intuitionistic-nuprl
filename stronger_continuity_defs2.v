@@ -30,6 +30,7 @@ Require Export computation_dec1.
 Require Export computation9.
 Require Export stronger_continuity_defs_typ.
 
+Unset Regular Subst Tactic.
 
 Definition old_bound_nat_aux {o} (arg : @NTerm o) x z (f : @NTerm o) :=
   mk_cbv arg x (mk_less (mk_var x)
