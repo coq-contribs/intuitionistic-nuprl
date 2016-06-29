@@ -27,6 +27,8 @@
 Require Export stronger_continuity_rule_v2.
 Require Export stronger_continuity_rule4.
 
+Unset Regular Subst Tactic.
+
 
 Lemma equality_in_modulus_fun_type_u_implies_v2 {o} :
   forall lib (M1 M2 n1 n2 f1 f2 : @CTerm o) T,
