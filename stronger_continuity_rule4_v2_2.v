@@ -27,6 +27,7 @@
 Require Export stronger_continuity_rule4_v2.
 Require Export per_props_subtype_rel.
 
+Unset Regular Subst Tactic.
 
 Lemma subtype_rel_nat_implies_eq_value_type_nut {o} :
   forall lib (T : @CTerm o),
