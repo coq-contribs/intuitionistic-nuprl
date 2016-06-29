@@ -34,6 +34,8 @@ Require Export sequents_tacs2.
 Require Export rules_tyfam.
 Require Export lsubst_hyps.
 
+Unset Regular Subst Tactic.
+
 (** printing |- $\vdash$ *)
 (** printing ->  $\rightarrow$ *)
 
