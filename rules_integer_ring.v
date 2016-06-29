@@ -36,6 +36,8 @@ Require Export per_props_top.
 Require Export integer_type.
 Require Export terms_arith.
 
+Unset Regular Subst Tactic.
+
 Lemma mkc_integer_eq_iff {o} :
   forall a b, @mkc_integer o a = mkc_integer b <-> a = b.
 Proof. intros; split; introv H.
