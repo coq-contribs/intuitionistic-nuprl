@@ -26,6 +26,9 @@
 
 Require Export rules_useful.
 Require Export per_props_equality.
+
+Unset Regular Subst Tactic.
+
 (** printing |- $\vdash$ *)
 (** printing ->  $\rightarrow$ *)
 (* begin hide *)
