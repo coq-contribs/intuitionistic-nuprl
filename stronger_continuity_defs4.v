@@ -27,6 +27,7 @@
 
 Require Export stronger_continuity_defs4_aux.
 
+Unset Regular Subst Tactic.
 
 (* we're going to assume that e is closed *)
 Inductive differ_force {o} (b : nat) (a : get_patom_set o) (f : @NTerm o) : @NTerm o -> @NTerm o -> Type :=
