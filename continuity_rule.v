@@ -26,6 +26,7 @@
 
 Require Export continuity_type.
 
+Unset Regular Subst Tactic.
 
 Definition rule_continuity {o}
            (F f : @NTerm o)
