@@ -26,6 +26,7 @@
 
 Require Export stronger_continuity_rule.
 
+Unset Regular Subst Tactic.
 
 
 Lemma cequivc_nat_implies {o} :
