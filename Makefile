@@ -771,7 +771,7 @@ computation8.vo : computation8.v computation7.vo
 	$(COQBIN)coqc -Q close "" computation8.v
 
 install: default
-	install -d ${COQBIN%bin/}user-contrib/IntuitionisticNUPRL
+	install -d $${COQBIN%bin/}user-contrib/IntuitionisticNUPRL
 	for vo_file in *.vo; do \
-	  install -m 0644 $$vo_file ${COQBIN%bin/}user-contrib/IntuitionisticNUPRL/$$vo_file; \
+	  install -m 0644 $$vo_file $${COQBIN%bin/}user-contrib/IntuitionisticNUPRL/$$vo_file; \
 	done
